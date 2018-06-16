@@ -1,0 +1,23 @@
+block content
+  body
+    #header
+      h1#header(v-on:click="changeLanguage") {{ title }}
+    #body
+      .carousel
+        div
+          img(src="http://via.placeholder.com/400x300" alt="Leavenworth")
+        div
+          img(src="http://via.placeholder.com/400x300" alt="Leavenworth")
+        div
+          img(src="http://via.placeholder.com/400x300" alt="Leavenworth")
+        div
+          img(src="http://via.placeholder.com/400x300" alt="Leavenworth")
+        div
+          img(src="http://via.placeholder.com/400x300" alt="Leavenworth")
+      p {{paragraph}}
+    #card
+      p(v-show="!showDetail" v-on:click="toggleLanguage") {{english}}
+      p(v-show="showDetail" v-on:click="toggleLanguage") {{german}}
+    #footer
+      p {{ copyright }}
+
