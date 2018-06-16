@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>   
+    <link href="./normalize.css" rel="stylesheet">
+    <link href="./styles.css" rel="stylesheet">
+    <title>Welcome to Leavenworth</title>
+</head>
+<body>
+    <div id="header">
+        <h1 id="header" v-on:click="changeLanguage">{{ title }}</h1>
+    </div>
+    <div id="body">
+		<div class="carousel">
+			<div><img src="http://via.placeholder.com/400x300" alt="Leavenworth"/></div>
+			<div><img src="http://via.placeholder.com/400x300" alt="Leavenworth"/></div>
+			<div><img src="http://via.placeholder.com/400x300" alt="Leavenworth"/></div>
+			<div><img src="http://via.placeholder.com/400x300" alt="Leavenworth"/></div>
+			<div><img src="http://via.placeholder.com/400x300" alt="Leavenworth"/></div>
+		</div>
+		
+		
+		<p>{{paragraph}}</p>
+    </div>
+    <div id="card">
+		<p v-show="!showDetail" v-on:click="toggleLanguage">{{english}}</p>
+		<p v-show="showDetail" v-on:click="toggleLanguage">{{german}}</p>
+    </div>
+    <div id="footer">
+		<p>{{ copyright }}</p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>   
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="app.js"></script>
+    <script>
+		$('.carousel').slick({
+			infinite: true,
+			slidesToShow: 3,
+			slidesToScroll: 3,
+			centerMode: true
+		});
+    </script>
+</body>
+</html>
