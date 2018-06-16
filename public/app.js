@@ -29,13 +29,17 @@ const body = new Vue({
 const card = new Vue({
 	el: '#card',
 	data: {
-		english: 'Beer',
-		german: 'Bier',
-		showDetail: false,
+		cards: [
+			{english: 'Beer', german: 'Bier', showDetail: false},
+			{english: 'Mountain', german: 'Berg', showDetail: false},
+			{english: 'River', german: 'Fluss', showDetail: false},
+			{english: 'Street', german: 'Straße', showDetail: false}
+		],
+
 	},
 	methods: {
-		toggleLanguage: function() {
-			this.showDetail = !this.showDetail;
+		toggleLanguage: function(card) {
+			card.showDetail = !card.showDetail;
 		}
 	}
 })

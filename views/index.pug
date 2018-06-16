@@ -1,5 +1,5 @@
+extends ./layout.pug
 block content
-  body
     #header
       h1#header(v-on:click="changeLanguage") {{ title }}
     #body
@@ -16,8 +16,9 @@ block content
           img(src="http://via.placeholder.com/400x300" alt="Leavenworth")
       p {{paragraph}}
     #card
-      p(v-show="!showDetail" v-on:click="toggleLanguage") {{english}}
-      p(v-show="showDetail" v-on:click="toggleLanguage") {{german}}
+      div(v-for="card in cards"  v-on:click="toggleLanguage(card)")
+        p(v-show="!card.showDetail") {{card.english}}
+        p(v-show="card.showDetail") {{card.german}}
     #footer
       p {{ copyright }}
 

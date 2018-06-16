@@ -1,49 +1,6 @@
-body {
-    font-family: 'Open Sans', sans-serif; 
-}
-#header {
-	padding: 10px;
-	background-color: blue;
-}
-#header h1 {
-	font-size: 4em;
-}
-#header h1:hover {
-	color: white;
-}
-
-#footer {
-	padding: 10px;
-	background-color: blue;
-}
-img {
-	width: 400px;
-	height: 300px;
-	opacity: 0.5;
-}
-
-#card {
-	background-color: red;
-	width: 200px;
-	height: 300px;
-	margin: 30px;
-}
-#card p {
-	width: 200px;
-	height: 300px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-size: 2em;
-}
-
-.slick-center img {
-	opacity: 1;
-}
-
 .slick-loading .slick-list
 {
-    background: #fff url('./ajax-loader.gif') center center no-repeat;
+    background: #fff url('../ajax-loader.gif') center center no-repeat;
 }
 
 @font-face
@@ -52,8 +9,8 @@ img {
     font-weight: normal;
     font-style: normal;
 
-    src: url('./fonts/slick.eot');
-    src: url('./fonts/slick.eot?#iefix') format('embedded-opentype'), url('./fonts/slick.woff') format('woff'), url('./fonts/slick.ttf') format('truetype'), url('./fonts/slick.svg#slick') format('svg');
+    src: url('../fonts/slick.eot');
+    src: url('../fonts/slick.eot?#iefix') format('embedded-opentype'), url('../fonts/slick.woff') format('woff'), url('../fonts/slick.ttf') format('truetype'), url('../fonts/slick.svg#slick') format('svg');
 }
 
 .slick-prev,
