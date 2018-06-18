@@ -1,3 +1,11 @@
+const cardArray = [
+			{english: 'Beer', german: 'Bier', type: 'cuisine', showDetail: false},
+			{english: 'Mountain', german: 'Berg', type: 'geography', showDetail: false},
+			{english: 'Goat', german: 'Ziege', type: 'animal', showDetail: false},
+			{english: 'Street', german: 'Straße', type: 'transportation', showDetail: false},
+			{english: 'River', german: 'Fluss', type: 'geography', showDetail: false}
+		]
+
 const header = new Vue({
     el: '#header',
     data: {
@@ -19,27 +27,30 @@ const footer = new Vue({
     }
 });
 
-const body = new Vue({
-    el: '#body',
-    data: {
-        paragraph: "Lorem ipsum dolor amet kitsch gochujang DIY air plant narwhal shoreditch tumblr YOLO iPhone cardigan cronut iceland. Pour-over poutine disrupt authentic, man braid vice biodiesel. Glossier synth man bun, trust fund keytar hashtag neutra cardigan single-origin coffee shabby chic sriracha banjo celiac direct trade chicharrones. Pop-up food truck everyday carry mixtape intelligentsia."
-    }
-});
 
 const card = new Vue({
 	el: '#card',
 	data: {
-		cards: [
-			{english: 'Beer', german: 'Bier', showDetail: false},
-			{english: 'Mountain', german: 'Berg', showDetail: false},
-			{english: 'River', german: 'Fluss', showDetail: false},
-			{english: 'Street', german: 'Straße', showDetail: false}
-		],
-
+		cards: cardArray,
+		type: ''
 	},
 	methods: {
 		toggleLanguage: function(card) {
 			card.showDetail = !card.showDetail;
+		},
+		filterList: function(){
+			this.type = event.target.value;
+		}
+	},
+	computed: {
+		uniqueCardsList: function() {
+			const types = [];
+			this.cards.forEach((card) => {
+				if(!types.includes(card.type)) {
+					types.push(card.type);
+				}
+			});
+			return types;
 		}
 	}
 })
