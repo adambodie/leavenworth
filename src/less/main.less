@@ -4,6 +4,8 @@
 
 // Variables
 @images: '../images';
+@font-family: 'Shrikhand', cursive;
+@banner-color: #c79a61;
 
 // Mixins
 .card-image-size() {
@@ -14,20 +16,34 @@
 
 body {
     font-family: 'Open Sans', sans-serif; 
+    background-color: #a86957;
 }
 #header {
 	padding: 10px;
-	background-color: blue;
+	background-color: @banner-color;
+	box-shadow: 4px 4px 8px #23201b;
 	h1 {
 		font-size: 4em;
+		font-family: @font-family;
+		color: white;
 		&:hover {
-			color: white;
+			text-shadow: 4px 4px 8px darken(white, 80%);
 		}
 	}
 }
 #footer {
 	padding: 10px;
-	background-color: blue;
+	background-color: @banner-color;
+	font-family: @font-family;
+	color: white;
+}
+
+#card {
+	h1 {
+		font-family: @font-family;
+		text-align: center;
+		color: white;
+	}
 }
 img {
 	width: 400px;
@@ -35,45 +51,65 @@ img {
 	opacity: 0.5;
 }
 
-#card {
+.carousel {
+	margin-top: 20px;
+}
 	select {
 		display: flex;
 		width: 30%;
 		margin: 20px;
-		option {
-			text-transform: capitalize;
-		}
 	}
-	div {
-		.card-image-size;
-		margin: 20px;
-		display: inline-block;
-		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-		&:nth-child(3n + 0) {
+ul {
+    padding-left: 0;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+  }
+
+li {
+	list-style-type: none;
+    padding: 10px 10px;
+    transition: all 0.3s ease;
+		&:nth-child(3n + 0) .card {
 			background: url('@{images}/card1.JPG');
 		}
-		&:nth-child(3n + 1) {
+		&:nth-child(3n + 1) .card {
 			background: url('@{images}/card2.JPG');
 		}
-		&:nth-child(3n + 2) {
+		&:nth-child(3n + 2) .card {
 			background: url('@{images}/card3.JPG');
-		}		
-		p {
-			.card-image-size;
-			font-family: 'Shrikhand', cursive;
-			color: white;
-			text-shadow: 2px 2px 4px #000000;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			font-size: 3em;
 		}
 	}
 
-}
 
+  .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 2px 2px 4px black;
+    .card-image-size;
+    border-radius: 20px;
+    text-align: center;
+    position: relative;
+    color: white;
+    font-family: @font-family;
+    font-size: 2.5em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    will-change: transform;
+  }
 .slick-center img {
 	opacity: 1;
 }
 
-
+.flip-enter-active {
+  transition: all 0.4s ease;
+}
+  
+.flip-leave-active {
+  display: none;
+}
+  
+.flip-enter, .flip-leave {
+  transform: rotateY(180deg);
+  opacity: 0;
+}

@@ -1,7 +1,7 @@
 extends ./layout.pug
 block content
     #header
-      h1#header(v-on:click="changeLanguage") {{ title }}
+      h1(v-on:click="changeLanguage") {{ title }}
     #body
       .carousel
         div
@@ -15,11 +15,14 @@ block content
         div
           img(src="http://via.placeholder.com/400x300" alt="Leavenworth")
     #card
+      h1 English-German Flash Cards
       select(v-on:change="filterList")
         option(value="") Select type of cards...
         option(v-for="item in uniqueCardsList") {{item}}
-      div(v-show="type === '' || type === card.type" v-for="card in cards"  v-on:click="toggleLanguage(card)")
-        p(v-show="!card.showDetail") {{card.english}}
-        p(v-show="card.showDetail") {{card.german}}
+      ul.card-list
+        li(v-show="type === '' || type === card.type" v-for="card in cards"  v-on:click="toggleLanguage(card)")
+          transition(name="flip")
+            p(v-if="!card.flipped" key="english").card {{card.english}}
+            p(v-else key="german").card {{card.german}}
     #footer
       p {{ copyright }}

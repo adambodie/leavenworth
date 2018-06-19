@@ -1,9 +1,26 @@
 const cardArray = [
-			{english: 'Beer', german: 'Bier', type: 'cuisine', showDetail: false},
-			{english: 'Mountain', german: 'Berg', type: 'geography', showDetail: false},
-			{english: 'Goat', german: 'Ziege', type: 'animal', showDetail: false},
-			{english: 'Street', german: 'Straße', type: 'transportation', showDetail: false},
-			{english: 'River', german: 'Fluss', type: 'geography', showDetail: false}
+			{english: 'Beer', german: 'Bier', type: 'Cuisine', flipped: false},
+			{english: 'Mountain', german: 'Berg', type: 'Geography', flipped: false},
+			{english: 'Goat', german: 'Ziege', type: 'Animal', flipped: false},
+			{english: 'Street', german: 'Straße', type: 'Transportation', flipped: false},
+			{english: 'River', german: 'Fluss', type: 'Geography', flipped: false},
+			{english: 'Sausage', german: 'Wurst', type: 'Cuisine', flipped: false},
+			{english: 'Knight', german: 'Ritter', type: 'Person', flipped: false},
+			{english: 'Welcome', german: 'Willkommen', type: 'Greeting', flipped: false},
+			{english: 'Island', german: 'insel', type: 'Geography', flipped: false},
+			{english: 'Bear', german: 'Bär', type: 'Animal', flipped: false},
+			{english: 'Bridge', german: 'Brücke', type: 'Transportation', flipped: false},
+			{english: 'Sun', german: 'Sonne', type: 'Weather', flipped: false},
+			{english: 'Library', german: 'Bibliothek', type: 'Place', flipped: false},
+			{english: 'Flowers', german: 'Blumen', type: 'Plants', flipped: false},
+			{english: 'Nutcracker', german: 'Nussknacker', type: 'Tool', flipped: false},
+			{english: 'Clouds', german: 'Wolken', type: 'Weather', flipped: false},
+			{english: 'Highway', german: 'Autobahn', type: 'Transportation', flipped: false},
+			{english: 'Cheers', german: 'Prost', type: 'Greeting', flipped: false},
+			{english: 'Rain', german: 'Regen', type: 'Weather', flipped: false},
+			{english: 'Waterfall', german: 'Wasserfall', type: 'Geography', flipped: false},
+			{english: 'Pipe', german: 'Rohr', type: 'Tool', flipped: false},
+			{english: 'Chocolate', german: 'Shockolade', type: 'Cuisine', flipped: false}
 		]
 
 const header = new Vue({
@@ -36,7 +53,7 @@ const card = new Vue({
 	},
 	methods: {
 		toggleLanguage: function(card) {
-			card.showDetail = !card.showDetail;
+			card.flipped = !card.flipped;
 		},
 		filterList: function(){
 			this.type = event.target.value;
