@@ -1,5 +1,6 @@
 const gulp = require('gulp');
 const less = require('gulp-less');
+const concat = require('gulp-concat');
 const path = require('path');
  
 gulp.task('less', () => {
@@ -7,6 +8,13 @@ gulp.task('less', () => {
     .pipe(less())
     .pipe(gulp.dest('./public/css'));
 });
+
+gulp.task('concat', () => {
+  return gulp.src(['./src/js/card.js', './src/js/header.js', './src/js/footer.js'])
+    .pipe(concat('app.js'))
+    .pipe(gulp.dest('./public'));
+});
+
 
 gulp.task('watch', function(){
   gulp.watch('./src/less/main.less', gulp.series('less'));
