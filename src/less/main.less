@@ -13,6 +13,11 @@
 	height: 400px;
 }
 
+.title-font-shadow() {
+		font-family: @font-family;
+		color: white;
+		text-shadow: 2px 2px 4px black;
+}
 
 body {
     font-family: 'Open Sans', sans-serif; 
@@ -40,9 +45,8 @@ body {
 
 #card {
 	h1 {
-		font-family: @font-family;
+		.title-font-shadow;
 		text-align: center;
-		color: white;
 	}
 }
 img {
@@ -56,8 +60,7 @@ img {
 }
 	select {
 		display: flex;
-		width: 30%;
-		margin: 20px;
+		margin: 0 auto;
 	}
 ul {
     padding-left: 0;
@@ -86,13 +89,11 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-shadow: 2px 2px 4px black;
     .card-image-size;
+    .title-font-shadow;
     border-radius: 20px;
     text-align: center;
     position: relative;
-    color: white;
-    font-family: @font-family;
     font-size: 2.5em;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     will-change: transform;
@@ -112,4 +113,27 @@ li {
 .flip-enter, .flip-leave {
   transform: rotateY(180deg);
   opacity: 0;
+}
+
+.delete-card {
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 10px 15px;
+	opacity: 0.4;
+	transition: all 0.5s ease;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	cursor: pointer;
+	&:hover {
+		color: black;
+	}
+}
+.language {
+	position: absolute;
+	left: 0;
+	top: 0;
+	padding: 10px 15px;
+	transition: all 0.5s ease;
+	font-size: 14px;
 }

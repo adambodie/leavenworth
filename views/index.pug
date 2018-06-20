@@ -20,9 +20,13 @@ block content
         option(value="") Select type of cards...
         option(v-for="item in uniqueCardsList") {{item}}
       ul.card-list
-        li(v-show="type === '' || type === card.type" v-for="card in cards"  v-on:click="toggleLanguage(card)")
+        li(v-show="type === '' || type === card.type" v-for="(card, index) in shuffleCards"  v-on:click="toggleLanguage(card)")
           transition(name="flip")
             p(v-if="!card.flipped" key="english").card {{card.english}}
+              span.language English
+              span(v-on:click="shuffleCards.splice(index,1)").delete-card X
             p(v-else key="german").card {{card.german}}
+              span.language German
+              span(v-on:click="shuffleCards.splice(index,1)").delete-card X
     #footer
       p {{ copyright }}

@@ -29,8 +29,9 @@ body {
 }
 #card h1 {
   font-family: 'Shrikhand', cursive;
-  text-align: center;
   color: white;
+  text-shadow: 2px 2px 4px black;
+  text-align: center;
 }
 img {
   width: 400px;
@@ -42,8 +43,7 @@ img {
 }
 select {
   display: flex;
-  width: 30%;
-  margin: 20px;
+  margin: 0 auto;
 }
 ul {
   padding-left: 0;
@@ -69,14 +69,14 @@ li:nth-child(3n + 2) .card {
   display: flex;
   justify-content: center;
   align-items: center;
-  text-shadow: 2px 2px 4px black;
   width: 300px;
   height: 400px;
+  font-family: 'Shrikhand', cursive;
+  color: white;
+  text-shadow: 2px 2px 4px black;
   border-radius: 20px;
   text-align: center;
   position: relative;
-  color: white;
-  font-family: 'Shrikhand', cursive;
   font-size: 2.5em;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   will-change: transform;
@@ -94,4 +94,26 @@ li:nth-child(3n + 2) .card {
 .flip-leave {
   transform: rotateY(180deg);
   opacity: 0;
+}
+.delete-card {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 10px 15px;
+  opacity: 0.4;
+  transition: all 0.5s ease;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+}
+.delete-card:hover {
+  color: black;
+}
+.language {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 10px 15px;
+  transition: all 0.5s ease;
+  font-size: 14px;
 }
