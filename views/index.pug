@@ -3,17 +3,7 @@ block content
     #header
       h1(v-on:click="changeLanguage") {{ title }}
     #body
-      .carousel
-        div
-          img(src="http://via.placeholder.com/400x300" alt="Leavenworth")
-        div
-          img(src="http://via.placeholder.com/400x300" alt="Leavenworth")
-        div
-          img(src="http://via.placeholder.com/400x300" alt="Leavenworth")
-        div
-          img(src="http://via.placeholder.com/400x300" alt="Leavenworth")
-        div
-          img(src="http://via.placeholder.com/400x300" alt="Leavenworth")
+      #app
     #card
       h1 English-German Flash Cards
       select(v-on:change="filterList")
