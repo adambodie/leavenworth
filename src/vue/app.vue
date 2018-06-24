@@ -1,7 +1,8 @@
 <template lang="pug">
     div.owl-carousel.owl-theme
       div(v-for="picture in pictures" :key="picture.index")
-          img(:src="'https://farm' + picture.farm + '.staticflickr.com/' + picture.server + '/' + picture.id + '_' + picture.secret + '_z.jpg'")    
+          img(:src="'https://farm' + picture.farm + '.staticflickr.com/' + picture.server + '/' + picture.id + '_' + picture.secret + '_z.jpg'" :alt="picture.title")
+          span.caption {{picture.title}}    
 </template>
 
 <script>

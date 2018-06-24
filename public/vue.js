@@ -10034,7 +10034,7 @@ exports.default = {
 	},
 	mounted: function mounted() {
 		var vm = this;
-		var url = 'https://api.flickr.com/services/rest/\n\t\t\t\t\t\t?method=flickr.photosets.getPhotos\n\t\t\t\t\t\t&api_key=0c3f8d32a28de8434240115b85a28499\n\t\t\t\t\t\t&photoset_id=72157695078896702\n\t\t\t\t\t\t&user_id=8994820%40N07\n\t\t\t\t\t\t&format=json&nojsoncallback=1';
+		var url = 'https://api.flickr.com/services/rest/\n\t\t\t\t\t?method=flickr.photosets.getPhotos\n\t\t\t\t\t&api_key=0c3f8d32a28de8434240115b85a28499\n\t\t\t\t\t&photoset_id=72157695078896702\n\t\t\t\t\t&user_id=8994820%40N07\n\t\t\t\t\t&format=json&nojsoncallback=1';
 		_axios2.default.get(url).then(function (res) {
 			vm.pictures = res.data.photoset.photo;
 			_vue2.default.nextTick(function () {
@@ -10059,7 +10059,7 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"owl-carousel owl-theme"},_vm._l((_vm.pictures),function(picture){return _c('div',{key:picture.index},[_c('img',{attrs:{"src":'https://farm' + picture.farm + '.staticflickr.com/' + picture.server + '/' + picture.id + '_' + picture.secret + '_z.jpg'}})])}))}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"owl-carousel owl-theme"},_vm._l((_vm.pictures),function(picture){return _c('div',{key:picture.index},[_c('img',{attrs:{"src":'https://farm' + picture.farm + '.staticflickr.com/' + picture.server + '/' + picture.id + '_' + picture.secret + '_z.jpg',"alt":picture.title}}),_c('span',{staticClass:"caption"},[_vm._v(_vm._s(picture.title)+"    ")])])}))}
 __vue__options__.staticRenderFns = []
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)

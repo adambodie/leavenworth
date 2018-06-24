@@ -49,14 +49,45 @@ body {
 		text-align: center;
 	}
 }
+
+
+
+.caption {
+	position: absolute;
+	left: 0;
+	bottom: 10px;
+	padding: 10px 10px;
+	font-size: 14px;
+	.title-font-shadow;
+	text-align: center;
+	width: 100%;
+}
+
 .owl-item {
 	img {
 		opacity: 0.5;
 	}
+	.caption {
+		display: none;
+	}
 }
 
-.center img {
-	opacity: 1;
+.owl-carousel .owl-item img {
+    display: block;
+    width: auto;
+    height: 336px!important;
+    margin: 0 auto;
+}
+
+
+
+.center {
+	img {
+		opacity: 1;
+	}
+	.caption {
+		display: block;
+	}
 }
 
 
@@ -137,3 +168,6 @@ li {
 	transition: all 0.5s ease;
 	font-size: 14px;
 }
+
+
+
