@@ -9,14 +9,17 @@ block content
       select(v-on:change="filterList")
         option(value="") Select type of cards...
         option(v-for="item in uniqueCardsList") {{item}}
+      .showAll
+        input(type="checkbox" v-model="checked" v-on:change="showAllCards()" )
+        |  Show All Cards
       ul.card-list
-        li(v-show="type === '' || type === card.type" v-for="(card, index) in shuffleCards"  v-on:click="toggleLanguage(card)")
+        li(v-bind:class="{ invisible: !card.visible }" v-show="type === '' || type === card.type" v-for="(card, index) in shuffleCards"  v-on:click="toggleLanguage(card)")
           transition(name="flip")
             p(v-if="!card.flipped" key="english").card {{card.english}}
               span.language English
-              span(v-on:click="shuffleCards.splice(index,1)").delete-card X
+              span(v-on:click="showCards(card)").delete-card X
             p(v-else key="german").card {{card.german}}
               span.language German
-              span(v-on:click="shuffleCards.splice(index,1)").delete-card X
+              span(v-on:click="showCards(card)").delete-card X
     #footer
       p {{ copyright }}

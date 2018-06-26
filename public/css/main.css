@@ -147,3 +147,9 @@ li:nth-child(3n + 2) .card {
   height: 50px;
   border-radius: 100%;
 }
+.invisible {
+  display: none;
+}
+.showAll {
+  margin-left: 100px;
+}

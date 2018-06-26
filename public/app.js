@@ -1,39 +1,41 @@
 const cardArray = [
-			{english: 'Beer', german: 'Bier', type: 'Cuisine', flipped: false},
-			{english: 'Mountain', german: 'Berg', type: 'Geography', flipped: false},
-			{english: 'Goat', german: 'Ziege', type: 'Animal', flipped: false},
-			{english: 'Street', german: 'Straße', type: 'Transportation', flipped: false},
-			{english: 'River', german: 'Fluss', type: 'Geography', flipped: false},
-			{english: 'Sausage', german: 'Wurst', type: 'Cuisine', flipped: false},
-			{english: 'Knight', german: 'Ritter', type: 'Person', flipped: false},
-			{english: 'Welcome', german: 'Willkommen', type: 'Greeting', flipped: false},
-			{english: 'Island', german: 'Insel', type: 'Geography', flipped: false},
-			{english: 'Tree', german: 'Baum', type: 'Plants', flipped: false},
-			{english: 'Bear', german: 'Bär', type: 'Animal', flipped: false},
-			{english: 'Bridge', german: 'Brücke', type: 'Transportation', flipped: false},
-			{english: 'Sun', german: 'Sonne', type: 'Weather', flipped: false},
-			{english: 'Library', german: 'Bibliothek', type: 'Place', flipped: false},
-			{english: 'Goodbye', german: 'Auf Wiedersehen', type: 'Greeting', flipped: false},
-			{english: 'Flowers', german: 'Blumen', type: 'Plants', flipped: false},
-			{english: 'Nutcracker', german: 'Nussknacker', type: 'Tool', flipped: false},
-			{english: 'Clouds', german: 'Wolken', type: 'Weather', flipped: false},
-			{english: 'Highway', german: 'Autobahn', type: 'Transportation', flipped: false},
-			{english: 'Cheers', german: 'Prost', type: 'Greeting', flipped: false},
-			{english: 'Blackbird', german: 'Amsel', type: 'Animal', flipped: false},
-			{english: 'Rain', german: 'Regen', type: 'Weather', flipped: false},
-			{english: 'City Hall', german: 'Rauthaus', type: 'Place', flipped: false},
-			{english: 'Waterfall', german: 'Wasserfall', type: 'Geography', flipped: false},
-			{english: 'Pipe', german: 'Rohr', type: 'Tool', flipped: false},
-			{english: 'Waitress', german: 'Kellnerin', type: 'Person', flipped: false},
-			{english: 'Icicle', german: 'Eiszapfen', type: 'Tool', flipped: false},
-			{english: 'Chocolate', german: 'Shockolade', type: 'Cuisine', flipped: false}
+			{english: 'Beer', german: 'Bier', type: 'Cuisine', flipped: false, visible: true},
+			{english: 'Mountain', german: 'Berg', type: 'Geography', flipped: false, visible: true},
+			{english: 'Goat', german: 'Ziege', type: 'Animal', flipped: false, visible: true},
+			{english: 'Street', german: 'Straße', type: 'Transportation', flipped: false, visible: true},
+			{english: 'River', german: 'Fluss', type: 'Geography', flipped: false, visible: true},
+			{english: 'Sausage', german: 'Wurst', type: 'Cuisine', flipped: false, visible: true},
+			{english: 'Knight', german: 'Ritter', type: 'Person', flipped: false, visible: true},
+			{english: 'Welcome', german: 'Willkommen', type: 'Greeting', flipped: false, visible: true},
+			{english: 'Island', german: 'Insel', type: 'Geography', flipped: false, visible: true},
+			{english: 'Tree', german: 'Baum', type: 'Plants', flipped: false, visible: true},
+			{english: 'Bear', german: 'Bär', type: 'Animal', flipped: false, visible: true},
+			{english: 'Bridge', german: 'Brücke', type: 'Transportation', flipped: false, visible: true},
+			{english: 'Sun', german: 'Sonne', type: 'Weather', flipped: false, visible: true},
+			{english: 'Library', german: 'Bibliothek', type: 'Place', flipped: false, visible: true},
+			{english: 'Goodbye', german: 'Auf Wiedersehen', type: 'Greeting', flipped: false, visible: true},
+			{english: 'Flowers', german: 'Blumen', type: 'Plants', flipped: false, visible: true},
+			{english: 'Nutcracker', german: 'Nussknacker', type: 'Tool', flipped: false, visible: true},
+			{english: 'Clouds', german: 'Wolken', type: 'Weather', flipped: false, visible: true},
+			{english: 'Highway', german: 'Autobahn', type: 'Transportation', flipped: false, visible: true},
+			{english: 'Cheers', german: 'Prost', type: 'Greeting', flipped: false, visible: true},
+			{english: 'Blackbird', german: 'Amsel', type: 'Animal', flipped: false, visible: true},
+			{english: 'Rain', german: 'Regen', type: 'Weather', flipped: false, visible: true},
+			{english: 'City Hall', german: 'Rauthaus', type: 'Place', flipped: false, visible: true},
+			{english: 'Waterfall', german: 'Wasserfall', type: 'Geography', flipped: false, visible: true},
+			{english: 'Pipe', german: 'Rohr', type: 'Tool', flipped: false, visible: true},
+			{english: 'Waitress', german: 'Kellnerin', type: 'Person', flipped: false, visible: true},
+			{english: 'Icicle', german: 'Eiszapfen', type: 'Tool', flipped: false, visible: true},
+			{english: 'Chocolate', german: 'Shockolade', type: 'Cuisine', flipped: false, visible: true}
 		];
 
 const card = new Vue({
 	el: '#card',
 	data: {
 		cards: cardArray,
-		type: ''
+		type: '',
+		visible: true,
+		checked: false
 	},
 	methods: {
 		toggleLanguage: function(card) {
@@ -42,6 +44,16 @@ const card = new Vue({
 		filterList: function(){
 			this.type = event.target.value;
 		},
+		showCards: function(card) {
+			card.visible = !card.visible;
+		},
+		showAllCards: function() {
+			if (this.checked === true) {
+				this.cards.forEach((card) => {
+					card.visible = true;
+				});
+			}
+		},		
 	},
 	computed: {
 		uniqueCardsList: function() {
