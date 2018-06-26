@@ -21,6 +21,9 @@ body {
 #header h1:hover {
   text-shadow: 4px 4px 8px #333333;
 }
+#body {
+  margin-top: 10px;
+}
 #footer {
   padding: 10px;
   background-color: #c79a61;
@@ -45,17 +48,17 @@ body {
   text-align: center;
   width: 100%;
 }
-.owl-item img {
-  opacity: 0.5;
-}
-.owl-item .caption {
-  display: none;
-}
 .owl-carousel .owl-item img {
   display: block;
   width: auto;
   height: 336px!important;
   margin: 0 auto;
+}
+.owl-item img {
+  opacity: 0.5;
+}
+.owl-item .caption {
+  display: none;
 }
 .center img {
   opacity: 1;
@@ -135,4 +138,12 @@ li:nth-child(3n + 2) .card {
   padding: 10px 15px;
   transition: all 0.5s ease;
   font-size: 14px;
+}
+.owl-theme .owl-nav [class*=owl-] {
+  font-size: 36px!important;
+  margin: 20px;
+  background: #c79a61 !important;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
 }

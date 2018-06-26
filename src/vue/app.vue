@@ -16,18 +16,18 @@ export default {
   name: 'App', 
   data () {
     return {
-      pictures: []    
-    }
-  },
-  mounted() {
-	const vm = this;
-	let url = `https://api.flickr.com/services/rest/
+      pictures: [],
+      url: `https://api.flickr.com/services/rest/
 					?method=flickr.photosets.getPhotos
 					&api_key=0c3f8d32a28de8434240115b85a28499
 					&photoset_id=72157695078896702
 					&user_id=8994820%40N07
 					&format=json&nojsoncallback=1`
-	axios.get(url)
+    }
+  },
+  mounted() {
+	const vm = this;
+	axios.get(vm.url)
 			.then((res) => {
 				vm.pictures = res.data.photoset.photo;
 				Vue.nextTick(function(){
@@ -45,7 +45,9 @@ export default {
 						}
 					});
 				}.bind(vm));
-			})
+			}).catch(error => {
+				console.log('Error fetching and parsing data', error);
+			});
 		} 
 	}
 </script>

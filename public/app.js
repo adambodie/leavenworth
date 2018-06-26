@@ -13,16 +13,19 @@ const cardArray = [
 			{english: 'Bridge', german: 'Brücke', type: 'Transportation', flipped: false},
 			{english: 'Sun', german: 'Sonne', type: 'Weather', flipped: false},
 			{english: 'Library', german: 'Bibliothek', type: 'Place', flipped: false},
+			{english: 'Goodbye', german: 'Auf Wiedersehen', type: 'Greeting', flipped: false},
 			{english: 'Flowers', german: 'Blumen', type: 'Plants', flipped: false},
 			{english: 'Nutcracker', german: 'Nussknacker', type: 'Tool', flipped: false},
 			{english: 'Clouds', german: 'Wolken', type: 'Weather', flipped: false},
 			{english: 'Highway', german: 'Autobahn', type: 'Transportation', flipped: false},
 			{english: 'Cheers', german: 'Prost', type: 'Greeting', flipped: false},
+			{english: 'Blackbird', german: 'Amsel', type: 'Animal', flipped: false},
 			{english: 'Rain', german: 'Regen', type: 'Weather', flipped: false},
 			{english: 'City Hall', german: 'Rauthaus', type: 'Place', flipped: false},
 			{english: 'Waterfall', german: 'Wasserfall', type: 'Geography', flipped: false},
 			{english: 'Pipe', german: 'Rohr', type: 'Tool', flipped: false},
 			{english: 'Waitress', german: 'Kellnerin', type: 'Person', flipped: false},
+			{english: 'Icicle', german: 'Eiszapfen', type: 'Tool', flipped: false},
 			{english: 'Chocolate', german: 'Shockolade', type: 'Cuisine', flipped: false}
 		];
 
@@ -50,7 +53,6 @@ const card = new Vue({
 			});
 			return types;
 		},
-		
 		shuffleCards: function() {
 			const array = cardArray;
 			let currentIndex = array.length, temporaryValue, randomIndex;

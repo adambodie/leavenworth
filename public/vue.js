@@ -10029,13 +10029,14 @@ exports.default = {
 	name: 'App',
 	data: function data() {
 		return {
-			pictures: []
+			pictures: [],
+			url: 'https://api.flickr.com/services/rest/\n\t\t\t\t\t?method=flickr.photosets.getPhotos\n\t\t\t\t\t&api_key=0c3f8d32a28de8434240115b85a28499\n\t\t\t\t\t&photoset_id=72157695078896702\n\t\t\t\t\t&user_id=8994820%40N07\n\t\t\t\t\t&format=json&nojsoncallback=1'
 		};
 	},
 	mounted: function mounted() {
 		var vm = this;
-		var url = 'https://api.flickr.com/services/rest/\n\t\t\t\t\t?method=flickr.photosets.getPhotos\n\t\t\t\t\t&api_key=0c3f8d32a28de8434240115b85a28499\n\t\t\t\t\t&photoset_id=72157695078896702\n\t\t\t\t\t&user_id=8994820%40N07\n\t\t\t\t\t&format=json&nojsoncallback=1';
-		_axios2.default.get(url).then(function (res) {
+
+		_axios2.default.get(vm.url).then(function (res) {
 			vm.pictures = res.data.photoset.photo;
 			_vue2.default.nextTick(function () {
 				$('.owl-carousel').owlCarousel({
