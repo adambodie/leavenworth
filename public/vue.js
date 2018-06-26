@@ -10035,7 +10035,6 @@ exports.default = {
 	},
 	mounted: function mounted() {
 		var vm = this;
-
 		_axios2.default.get(vm.url).then(function (res) {
 			vm.pictures = res.data.photoset.photo;
 			_vue2.default.nextTick(function () {
@@ -10053,6 +10052,8 @@ exports.default = {
 					}
 				});
 			}.bind(vm));
+		}).catch(function (error) {
+			console.log('Error fetching and parsing data', error);
 		});
 	}
 };
@@ -10060,7 +10061,7 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"owl-carousel owl-theme"},_vm._l((_vm.pictures),function(picture){return _c('div',{key:picture.index},[_c('img',{attrs:{"src":'https://farm' + picture.farm + '.staticflickr.com/' + picture.server + '/' + picture.id + '_' + picture.secret + '_z.jpg',"alt":picture.title}}),_c('span',{staticClass:"caption"},[_vm._v(_vm._s(picture.title)+"    ")])])}))}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"owl-carousel owl-theme"},_vm._l((_vm.pictures),function(picture){return _c('div',{key:picture.index},[_c('a',{attrs:{"href":'https://farm' + picture.farm + '.staticflickr.com/' + picture.server + '/' + picture.id + '_' + picture.secret + '_z.jpg',"alt":picture.title,"target":"_blank"}},[_c('img',{attrs:{"src":'https://farm' + picture.farm + '.staticflickr.com/' + picture.server + '/' + picture.id + '_' + picture.secret + '_z.jpg',"alt":picture.title}}),_c('span',{staticClass:"caption"},[_vm._v(_vm._s(picture.title))])])])}))}
 __vue__options__.staticRenderFns = []
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)

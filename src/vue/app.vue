@@ -1,8 +1,9 @@
 <template lang="pug">
     div.owl-carousel.owl-theme
       div(v-for="picture in pictures" :key="picture.index")
-          img(:src="'https://farm' + picture.farm + '.staticflickr.com/' + picture.server + '/' + picture.id + '_' + picture.secret + '_z.jpg'" :alt="picture.title")
-          span.caption {{picture.title}}    
+          a(:href="'https://farm' + picture.farm + '.staticflickr.com/' + picture.server + '/' + picture.id + '_' + picture.secret + '_z.jpg'" :alt="picture.title" target="_blank")
+            img(:src="'https://farm' + picture.farm + '.staticflickr.com/' + picture.server + '/' + picture.id + '_' + picture.secret + '_z.jpg'" :alt="picture.title")
+            span.caption {{picture.title}}
 </template>
 
 <script>
@@ -10,7 +11,6 @@ import Vue from 'vue'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 Vue.use(VueAxios, axios)
-
 
 export default {
   name: 'App', 
