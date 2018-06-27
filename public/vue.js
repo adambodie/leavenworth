@@ -1,6 +1,7 @@
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 const Vue = require('vue');
 const App = require('./src/vue/app.vue');
+const Card = require('./src/vue/card.vue');
 
 new Vue({
 		el: '#app',
@@ -9,7 +10,14 @@ new Vue({
 		}
 })
 
-},{"./src/vue/app.vue":33,"vue":32}],2:[function(require,module,exports){
+new Vue({
+		el: '#card',
+		render: function(createElement) {
+			return createElement(Card);
+		}
+})
+
+},{"./src/vue/app.vue":33,"./src/vue/card.vue":34,"vue":32}],2:[function(require,module,exports){
 module.exports = require('./lib/axios');
 },{"./lib/axios":4}],3:[function(require,module,exports){
 (function (process){
@@ -10061,7 +10069,7 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"owl-carousel owl-theme"},_vm._l((_vm.pictures),function(picture){return _c('div',{key:picture.index},[_c('a',{attrs:{"href":'https://farm' + picture.farm + '.staticflickr.com/' + picture.server + '/' + picture.id + '_' + picture.secret + '_z.jpg',"alt":picture.title,"target":"_blank"}},[_c('img',{attrs:{"src":'https://farm' + picture.farm + '.staticflickr.com/' + picture.server + '/' + picture.id + '_' + picture.secret + '_z.jpg',"alt":picture.title}}),_c('span',{staticClass:"caption"},[_vm._v(_vm._s(picture.title))])])])}))}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"owl-carousel owl-theme"},_vm._l((_vm.pictures),function(picture){return _c('div',{key:picture.index},[_c('a',{attrs:{"href":'https://farm' + picture.farm + '.staticflickr.com/' + picture.server + '/' + picture.id + '_' + picture.secret + '_c.jpg',"alt":picture.title,"target":"_blank"}},[_c('img',{attrs:{"src":'https://farm' + picture.farm + '.staticflickr.com/' + picture.server + '/' + picture.id + '_' + picture.secret + '_z.jpg',"alt":picture.title}}),_c('span',{staticClass:"caption"},[_vm._v(_vm._s(picture.title))])])])}))}
 __vue__options__.staticRenderFns = []
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -10073,4 +10081,89 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     hotAPI.reload("data-v-1d8bff90", __vue__options__)
   }
 })()}
-},{"axios":2,"vue":32,"vue-axios":30,"vue-hot-reload-api":31}]},{},[1]);
+},{"axios":2,"vue":32,"vue-axios":30,"vue-hot-reload-api":31}],34:[function(require,module,exports){
+;(function(){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _vue = require('vue');
+
+var _vue2 = _interopRequireDefault(_vue);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = {
+	name: 'Card',
+	data: function data() {
+		return {
+			cards: cardArray,
+			type: '',
+			visible: true,
+			checked: false
+		};
+	},
+
+	methods: {
+		toggleLanguage: function toggleLanguage(card) {
+			card.flipped = !card.flipped;
+		},
+		filterList: function filterList() {
+			this.type = event.target.value;
+		},
+		showCards: function showCards(card) {
+			card.visible = !card.visible;
+		},
+		showAllCards: function showAllCards() {
+			if (this.checked === true) {
+				this.cards.forEach(function (card) {
+					card.visible = true;
+				});
+			}
+		}
+	},
+	computed: {
+		uniqueCardsList: function uniqueCardsList() {
+			var types = [];
+			this.cards.forEach(function (card) {
+				if (!types.includes(card.type)) {
+					types.push(card.type);
+				}
+			});
+			return types;
+		},
+		shuffleCards: function shuffleCards() {
+			var array = cardArray;
+			var currentIndex = array.length,
+			    temporaryValue = void 0,
+			    randomIndex = void 0;
+			while (0 !== currentIndex) {
+				randomIndex = Math.floor(Math.random() * currentIndex);
+				currentIndex -= 1;
+				temporaryValue = array[currentIndex];
+				array[currentIndex] = array[randomIndex];
+				array[randomIndex] = temporaryValue;
+			}
+			return array;
+		}
+	}
+};
+})()
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"card"}},[_c('h1',[_vm._v("English-German Flash Cards")]),_c('select',{on:{"change":_vm.filterList}},[_c('option',{attrs:{"value":""}},[_vm._v("Select type of cards...")]),_vm._l((_vm.uniqueCardsList),function(item){return _c('option',[_vm._v(_vm._s(item))])})],2),_c('div',{staticClass:"showAll"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.checked),expression:"checked"}],attrs:{"type":"checkbox"},domProps:{"checked":Array.isArray(_vm.checked)?_vm._i(_vm.checked,null)>-1:(_vm.checked)},on:{"change":[function($event){var $$a=_vm.checked,$$el=$event.target,$$c=$$el.checked?(true):(false);if(Array.isArray($$a)){var $$v=null,$$i=_vm._i($$a,$$v);if($$el.checked){$$i<0&&(_vm.checked=$$a.concat([$$v]))}else{$$i>-1&&(_vm.checked=$$a.slice(0,$$i).concat($$a.slice($$i+1)))}}else{_vm.checked=$$c}},function($event){_vm.showAllCards()}]}}),_vm._v(" Show All Cards")]),_c('ul',{staticClass:"card-list"},_vm._l((_vm.shuffleCards),function(card,index){return _c('li',{directives:[{name:"show",rawName:"v-show",value:(_vm.type === '' || _vm.type === card.type),expression:"type === '' || type === card.type"}],class:{ invisible: !card.visible },on:{"click":function($event){_vm.toggleLanguage(card)}}},[_c('transition',{attrs:{"name":"flip"}},[(!card.flipped)?_c('p',{key:"english",staticClass:"card"},[_vm._v(_vm._s(card.english)),_c('span',{staticClass:"language"},[_vm._v("English")]),_c('span',{staticClass:"delete-card",on:{"click":function($event){_vm.showCards(card)}}},[_vm._v("X")])]):_c('p',{key:"german",staticClass:"card"},[_vm._v(_vm._s(card.german)),_c('span',{staticClass:"language"},[_vm._v("German")]),_c('span',{staticClass:"delete-card",on:{"click":function($event){_vm.showCards(card)}}},[_vm._v("X")])])])],1)}))])}
+__vue__options__.staticRenderFns = []
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-1ae64cee", __vue__options__)
+  } else {
+    hotAPI.reload("data-v-1ae64cee", __vue__options__)
+  }
+})()}
+},{"vue":32,"vue-hot-reload-api":31}]},{},[1]);

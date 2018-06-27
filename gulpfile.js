@@ -10,7 +10,7 @@ gulp.task('less', () => {
 });
 
 gulp.task('concat', () => {
-  return gulp.src(['./src/js/card.js', './src/js/header.js', './src/js/footer.js'])
+  return gulp.src(['./src/js/cardArray.js', './src/js/header.js', './src/js/footer.js'])
     .pipe(concat('app.js'))
     .pipe(gulp.dest('./public'));
 });

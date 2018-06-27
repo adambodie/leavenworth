@@ -29,57 +29,6 @@ const cardArray = [
 			{english: 'Chocolate', german: 'Shockolade', type: 'Cuisine', flipped: false, visible: true}
 		];
 
-const card = new Vue({
-	el: '#card',
-	data: {
-		cards: cardArray,
-		type: '',
-		visible: true,
-		checked: false
-	},
-	methods: {
-		toggleLanguage: function(card) {
-			card.flipped = !card.flipped;
-		},
-		filterList: function(){
-			this.type = event.target.value;
-		},
-		showCards: function(card) {
-			card.visible = !card.visible;
-		},
-		showAllCards: function() {
-			if (this.checked === true) {
-				this.cards.forEach((card) => {
-					card.visible = true;
-				});
-			}
-		},		
-	},
-	computed: {
-		uniqueCardsList: function() {
-			const types = [];
-			this.cards.forEach((card) => {
-				if(!types.includes(card.type)) {
-					types.push(card.type);
-				}
-			});
-			return types;
-		},
-		shuffleCards: function() {
-			const array = cardArray;
-			let currentIndex = array.length, temporaryValue, randomIndex;
-			while (0 !== currentIndex) {
-				randomIndex = Math.floor(Math.random() * currentIndex);
-				currentIndex -= 1;
-				temporaryValue = array[currentIndex];
-				array[currentIndex] = array[randomIndex];
-				array[randomIndex] = temporaryValue;
-			}
-			return array;
-		}
-	}
-})		
-
 const header = new Vue({
     el: '#header',
     data: {
