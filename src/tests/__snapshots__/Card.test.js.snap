@@ -1,103 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App.test.js has the expected html structure 1`] = `
-<div
-  id="card"
->
-  <h1>
-    English-German Flash Cards
-  </h1>
-  <select>
-    <option
-      value=""
-    >
-      Select type of cards...
-    </option>
-    <option>
-      Animal
-    </option>
-    <option>
-      Geography
-    </option>
-    <option>
-      Cuisine
-    </option>
-  </select>
-  <div
-    class="showAll"
-  >
-    <input
-      type="checkbox"
-    />
-     Show All Cards
-  </div>
-  <ul
-    class="card-list"
-  >
-    <li
-      class=""
-    >
-      <p
-        class="card"
-        name="flip"
-      >
-        Goat
-        <span
-          class="language"
-        >
-          English
-        </span>
-        <span
-          class="delete-card"
-        >
-          X
-        </span>
-      </p>
-    </li>
-    <li
-      class=""
-    >
-      <p
-        class="card"
-        name="flip"
-      >
-        Beer
-        <span
-          class="language"
-        >
-          English
-        </span>
-        <span
-          class="delete-card"
-        >
-          X
-        </span>
-      </p>
-    </li>
-    <li
-      class=""
-    >
-      <p
-        class="card"
-        name="flip"
-      >
-        Mountain
-        <span
-          class="language"
-        >
-          English
-        </span>
-        <span
-          class="delete-card"
-        >
-          X
-        </span>
-      </p>
-    </li>
-  </ul>
-</div>
-`;
-
 exports[`Card.test.js has the expected html structure 1`] = `
 <div
   id="card"
@@ -112,13 +14,13 @@ exports[`Card.test.js has the expected html structure 1`] = `
       Select type of cards...
     </option>
     <option>
+      Geography
+    </option>
+    <option>
       Animal
     </option>
     <option>
       Cuisine
-    </option>
-    <option>
-      Geography
     </option>
   </select>
   <div
@@ -132,26 +34,6 @@ exports[`Card.test.js has the expected html structure 1`] = `
   <ul
     class="card-list"
   >
-    <li
-      class=""
-    >
-      <p
-        class="card"
-        name="flip"
-      >
-        Mountain
-        <span
-          class="language"
-        >
-          English
-        </span>
-        <span
-          class="delete-card"
-        >
-          X
-        </span>
-      </p>
-    </li>
     <li
       class=""
     >
@@ -180,6 +62,26 @@ exports[`Card.test.js has the expected html structure 1`] = `
         name="flip"
       >
         Goat
+        <span
+          class="language"
+        >
+          English
+        </span>
+        <span
+          class="delete-card"
+        >
+          X
+        </span>
+      </p>
+    </li>
+    <li
+      class=""
+    >
+      <p
+        class="card"
+        name="flip"
+      >
+        Mountain
         <span
           class="language"
         >

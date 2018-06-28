@@ -37,12 +37,8 @@ export default {
 						items: 1,
 						nav: true,
 						margin: 10,
+						stagePadding: 350,
 						dots: false,
-						responsive:{
-							600:{
-								items:3
-							}
-						}
 					});
 				}.bind(vm));
 			}).catch(error => {

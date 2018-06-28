@@ -19,4 +19,3 @@ gulp.task('concat', () => {
 gulp.task('watch', function(){
   gulp.watch('./src/less/main.less', gulp.series('less'));
 });
-
