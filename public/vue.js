@@ -10118,6 +10118,16 @@ exports.default = {
 					card.visible = true;
 				});
 			}
+		},
+		allEnglish: function allEnglish() {
+			this.cards.forEach(function (card) {
+				card.flipped = false;
+			});
+		},
+		allGerman: function allGerman() {
+			this.cards.forEach(function (card) {
+				card.flipped = true;
+			});
 		}
 	},
 	computed: {
@@ -10150,7 +10160,7 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"card"}},[_c('h1',[_vm._v("English-German Flash Cards")]),_c('select',{on:{"change":_vm.filterList}},[_c('option',{attrs:{"value":""}},[_vm._v("Select type of cards...")]),_vm._l((_vm.uniqueCardsList),function(item){return _c('option',[_vm._v(_vm._s(item))])})],2),_c('div',{staticClass:"showAll"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.checked),expression:"checked"}],attrs:{"type":"checkbox"},domProps:{"checked":Array.isArray(_vm.checked)?_vm._i(_vm.checked,null)>-1:(_vm.checked)},on:{"change":[function($event){var $$a=_vm.checked,$$el=$event.target,$$c=$$el.checked?(true):(false);if(Array.isArray($$a)){var $$v=null,$$i=_vm._i($$a,$$v);if($$el.checked){$$i<0&&(_vm.checked=$$a.concat([$$v]))}else{$$i>-1&&(_vm.checked=$$a.slice(0,$$i).concat($$a.slice($$i+1)))}}else{_vm.checked=$$c}},function($event){_vm.showAllCards()}]}}),_vm._v(" Show All Cards")]),_c('ul',{staticClass:"card-list"},_vm._l((_vm.shuffleCards),function(card,index){return _c('li',{directives:[{name:"show",rawName:"v-show",value:(_vm.type === '' || _vm.type === card.type),expression:"type === '' || type === card.type"}],class:{ invisible: !card.visible },on:{"click":function($event){_vm.toggleLanguage(card)}}},[_c('transition',{attrs:{"name":"flip"}},[(!card.flipped)?_c('p',{key:"english",staticClass:"card"},[_vm._v(_vm._s(card.english)),_c('span',{staticClass:"language"},[_vm._v("English")]),_c('span',{staticClass:"delete-card",on:{"click":function($event){_vm.showCards(card)}}},[_vm._v("X")])]):_c('p',{key:"german",staticClass:"card"},[_vm._v(_vm._s(card.german)),_c('span',{staticClass:"language"},[_vm._v("German")]),_c('span',{staticClass:"delete-card",on:{"click":function($event){_vm.showCards(card)}}},[_vm._v("X")])])])],1)}))])}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"card"}},[_c('h1',[_vm._v("English-German Flash Cards")]),_c('div',{staticClass:"options"},[_c('select',{on:{"change":_vm.filterList}},[_c('option',{attrs:{"value":""}},[_vm._v("Select type of cards...")]),_vm._l((_vm.uniqueCardsList),function(item){return _c('option',[_vm._v(_vm._s(item))])})],2),_c('div',{staticClass:"showAll"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.checked),expression:"checked"}],attrs:{"type":"checkbox"},domProps:{"checked":Array.isArray(_vm.checked)?_vm._i(_vm.checked,null)>-1:(_vm.checked)},on:{"change":[function($event){var $$a=_vm.checked,$$el=$event.target,$$c=$$el.checked?(true):(false);if(Array.isArray($$a)){var $$v=null,$$i=_vm._i($$a,$$v);if($$el.checked){$$i<0&&(_vm.checked=$$a.concat([$$v]))}else{$$i>-1&&(_vm.checked=$$a.slice(0,$$i).concat($$a.slice($$i+1)))}}else{_vm.checked=$$c}},function($event){_vm.showAllCards()}]}}),_vm._v(" Show All Cards")]),_c('button',{on:{"click":function($event){_vm.allEnglish()}}},[_vm._v("All English")]),_c('button',{on:{"click":function($event){_vm.allGerman()}}},[_vm._v("All German")])]),_c('ul',{staticClass:"card-list"},_vm._l((_vm.shuffleCards),function(card,index){return _c('li',{directives:[{name:"show",rawName:"v-show",value:(_vm.type === '' || _vm.type === card.type),expression:"type === '' || type === card.type"}],class:{ invisible: !card.visible },on:{"click":function($event){_vm.toggleLanguage(card)}}},[_c('transition',{attrs:{"name":"flip"}},[(!card.flipped)?_c('p',{key:"english",staticClass:"card"},[_vm._v(_vm._s(card.english)),_c('span',{staticClass:"language"},[_vm._v("English")]),_c('span',{staticClass:"delete-card",on:{"click":function($event){_vm.showCards(card)}}},[_vm._v("X")])]):_c('p',{key:"german",staticClass:"card"},[_vm._v(_vm._s(card.german)),_c('span',{staticClass:"language"},[_vm._v("German")]),_c('span',{staticClass:"delete-card",on:{"click":function($event){_vm.showCards(card)}}},[_vm._v("X")])])])],1)}))])}
 __vue__options__.staticRenderFns = []
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)

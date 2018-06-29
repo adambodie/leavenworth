@@ -20,7 +20,6 @@ describe('Card.test.js', () => {
 	})
 	it('should have a length of 3', () => {
 		cmp.vm.types = [];
-		//expect(cmp.vm.uniqueCardsList).toBe(['Cuisine', 'Geography', 'Animal'])
 		expect(cmp.vm.uniqueCardsList).toContain('Animal')
 		expect(cmp.vm.uniqueCardsList.length).toBe(3)
 	})

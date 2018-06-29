@@ -1,12 +1,15 @@
 <template lang="pug">
     div#card
       h1 English-German Flash Cards
-      select(v-on:change="filterList")
-        option(value="") Select type of cards...
-        option(v-for="item in uniqueCardsList") {{item}}
-      .showAll
-        input(type="checkbox" v-model="checked" v-on:change="showAllCards()" )
-        |  Show All Cards
+      div.options
+        select(v-on:change="filterList")
+          option(value="") Select type of cards...
+          option(v-for="item in uniqueCardsList") {{item}}
+        .showAll
+          input(type="checkbox" v-model="checked" v-on:change="showAllCards()" )
+          |  Show All Cards
+        button(v-on:click="allEnglish()") All English
+        button(v-on:click="allGerman()") All German
       ul.card-list
         li(v-bind:class="{ invisible: !card.visible }" v-show="type === '' || type === card.type" v-for="(card, index) in shuffleCards"  v-on:click="toggleLanguage(card)")
           transition(name="flip")
@@ -25,7 +28,8 @@ export default {
 	name: 'Card', 
 	data () {
 		return {
-			cards: [{english: 'Beer', german: 'Bier', type: 'Cuisine', flipped: false, visible: true},
+			cards: [
+			{english: 'Beer', german: 'Bier', type: 'Cuisine', flipped: false, visible: true},
 			{english: 'Mountain', german: 'Berg', type: 'Geography', flipped: false, visible: true},
 			{english: 'Goat', german: 'Ziege', type: 'Animal', flipped: false, visible: true},
 			{english: 'Street', german: 'Straße', type: 'Transportation', flipped: false, visible: true},
@@ -52,7 +56,8 @@ export default {
 			{english: 'Pipe', german: 'Rohr', type: 'Tool', flipped: false, visible: true},
 			{english: 'Waitress', german: 'Kellnerin', type: 'Person', flipped: false, visible: true},
 			{english: 'Icicle', german: 'Eiszapfen', type: 'Tool', flipped: false, visible: true},
-			{english: 'Chocolate', german: 'Shockolade', type: 'Cuisine', flipped: false, visible: true}],
+			{english: 'Chocolate', german: 'Shockolade', type: 'Cuisine', flipped: false, visible: true}
+			],
 			type: '',
 			visible: true,
 			checked: false
@@ -75,6 +80,16 @@ export default {
 				});
 			}
 		},
+		allEnglish: function() {
+			this.cards.forEach((card) => {
+				card.flipped = false;
+			});
+		},
+		allGerman: function() {
+			this.cards.forEach((card) => {
+				card.flipped = true;
+			});
+		},		
 	},
 	computed: {
 		uniqueCardsList: function() {

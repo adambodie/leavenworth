@@ -38,7 +38,7 @@ export default {
 						nav: true,
 						margin: 10,
 						stagePadding: 350,
-						dots: false,
+						dots: false
 					});
 				}.bind(vm));
 			}).catch(error => {
