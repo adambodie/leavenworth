@@ -1,6 +1,8 @@
 <template lang="pug">
-    div.owl-carousel.owl-theme
-      div(v-for="picture in pictures" :key="picture.index")
+    div
+      loading(:active.sync='isLoading' :is-full-page="true")
+      div.owl-carousel.owl-theme
+        div(v-for="picture in pictures" :key="picture.index")
           a(:href="'https://farm' + picture.farm + '.staticflickr.com/' + picture.server + '/' + picture.id + '_' + picture.secret + '_c.jpg'" :alt="picture.title" target="_blank")
             img(:src="'https://farm' + picture.farm + '.staticflickr.com/' + picture.server + '/' + picture.id + '_' + picture.secret + '_z.jpg'" :alt="picture.title")
             span.caption {{picture.title}}
@@ -8,25 +10,32 @@
 
 <script>
 import Vue from 'vue'
+import Loading from 'vue-loading-overlay';
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 Vue.use(VueAxios, axios)
+Vue.use(Loading)
 
 export default {
   name: 'App', 
   data () {
     return {
-      pictures: [],
-      url: `https://api.flickr.com/services/rest/
+		pictures: [],
+		url: `https://api.flickr.com/services/rest/
 					?method=flickr.photosets.getPhotos
 					&api_key=0c3f8d32a28de8434240115b85a28499
 					&photoset_id=72157695078896702
 					&user_id=8994820%40N07
-					&format=json&nojsoncallback=1`
+					&format=json&nojsoncallback=1`,
+		isLoading: false,
     }
   },
+  components: {
+	Loading
+   },
   mounted() {
 	const vm = this;
+	this.isLoading = true;
 	axios.get(vm.url)
 			.then((res) => {
 				vm.pictures = res.data.photoset.photo;
@@ -40,6 +49,7 @@ export default {
 						stagePadding: 350,
 						dots: false
 					});
+					this.isLoading = false;
 				}.bind(vm));
 			}).catch(error => {
 				console.log('Error fetching and parsing data', error);
