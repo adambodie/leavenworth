@@ -26,7 +26,6 @@ body {
 #header {
 	padding: 10px;
 	background-color: @banner-color;
-	box-shadow: 4px 4px 8px #23201b;
 	h1 {
 		font-size: 3em;
 		font-family: @font-family;
@@ -34,17 +33,19 @@ body {
 		text-shadow: 4px 4px 8px darken(white, 80%);
 	}
 }
-#body {
-	margin: 30px;
-	box-shadow: 4px 4px 8px #23201b;
-}
+
 #footer {
 	padding: 10px;
 	background-color: @banner-color;
 	font-family: @font-family;
 	color: white;
 }
-
+.border {
+		position: absolute;
+		left: 0;
+		right: 0;
+		width: 100%;
+	}
 #card {
 	margin: 30px;
 	box-shadow: 4px 4px 8px #23201b;
@@ -57,6 +58,20 @@ body {
 		box-shadow: 4px 4px 8px #23201b;
 	}
 }
+
+.jumbotron {
+	margin: 30px;
+	box-shadow: 4px 4px 8px #23201b;
+	h1 {
+		.title-font-shadow;
+		text-align: center;
+		font-size: 3em;
+		padding: 20px;
+		background-color: @banner-color;
+		box-shadow: 4px 4px 8px #23201b;
+	}
+}
+
 
 .caption {
 	position: absolute;
@@ -194,6 +209,6 @@ li {
 }
 
 .loading-background {
-    background: @banner-color!important;
+    background: #a86957!important;
     opacity: 1!important;
 }

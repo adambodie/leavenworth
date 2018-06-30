@@ -1,6 +1,7 @@
 <template lang="pug">
-    div
+    div.jumbotron
       loading(:active.sync='isLoading' :is-full-page="true")
+      h1 Photo Gallery
       div.owl-carousel.owl-theme
         div(v-for="picture in pictures" :key="picture.index")
           a(:href="'https://farm' + picture.farm + '.staticflickr.com/' + picture.server + '/' + picture.id + '_' + picture.secret + '_c.jpg'" :alt="picture.title" target="_blank")
@@ -46,7 +47,7 @@ export default {
 						items: 1,
 						nav: true,
 						margin: 10,
-						stagePadding: 350,
+						stagePadding: 325,
 						dots: false
 					});
 					this.isLoading = false;

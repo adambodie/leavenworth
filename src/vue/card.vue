@@ -1,5 +1,5 @@
 <template lang="pug">
-    div#card
+    div.jumbotron
       h1 English-German Flash Cards
       div.options
         select(v-on:change="filterList")
