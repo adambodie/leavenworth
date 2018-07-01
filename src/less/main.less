@@ -19,10 +19,21 @@
 		text-shadow: 2px 2px 4px black;
 }
 
+//Main Styles
+
 body {
     font-family: 'Open Sans', sans-serif; 
     background-color: #a86957;
 }
+
+.border {
+	position: absolute;
+	left: 0;
+	right: 0;
+	width: 100%;
+}
+
+// Header Styles
 #header {
 	padding: 10px;
 	background-color: @banner-color;
@@ -34,31 +45,31 @@ body {
 	}
 }
 
+// Intro Styles
+.intro-body {
+	display: flex;
+}
+
+.paragraph {
+	padding: 20px;
+}
+
+.map {
+	img {
+		padding: 20px;
+	}
+}
+
+// Footer Styles
 #footer {
 	padding: 10px;
 	background-color: @banner-color;
 	font-family: @font-family;
 	color: white;
 }
-.border {
-		position: absolute;
-		left: 0;
-		right: 0;
-		width: 100%;
-	}
-#card {
-	margin: 30px;
-	box-shadow: 4px 4px 8px #23201b;
-	h1 {
-		.title-font-shadow;
-		text-align: center;
-		font-size: 3em;
-		padding: 20px;
-		background-color: @banner-color;
-		box-shadow: 4px 4px 8px #23201b;
-	}
-}
 
+
+// Jumbotron Styles
 .jumbotron {
 	margin: 30px;
 	box-shadow: 4px 4px 8px #23201b;
@@ -72,7 +83,14 @@ body {
 	}
 }
 
+// Loading Background Styles
+.loading-background {
+    background: #a86957!important;
+    opacity: 1!important;
+}
 
+
+// Photo Gallery Styles
 .caption {
 	position: absolute;
 	left: 0;
@@ -112,7 +130,20 @@ body {
 	}
 }
 
+.owl-theme .owl-nav [class*=owl-] {
+    font-size: 36px!important;
+    margin: 20px;
+    background: @banner-color!important;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    box-shadow: 2px 2px 4px black;
+    &:focus {
+		outline: none;
+    }
+}
 
+// Cards Styles
 .options {
 	display: flex;
 	justify-content: space-around;
@@ -155,20 +186,6 @@ li {
     will-change: transform;
   }
 
-
-.flip-enter-active {
-  transition: all 0.4s ease;
-}
-  
-.flip-leave-active {
-  display: none;
-}
-  
-.flip-enter, .flip-leave {
-  transform: rotateY(180deg);
-  opacity: 0;
-}
-
 .delete-card {
 	position: absolute;
 	right: 0;
@@ -192,23 +209,24 @@ li {
 	font-size: 14px;
 }
 
-.owl-theme .owl-nav [class*=owl-] {
-    font-size: 36px!important;
-    margin: 20px;
-    background: @banner-color!important;
-    width: 50px;
-    height: 50px;
-    border-radius: 100%;
-    box-shadow: 2px 2px 4px black;
-    &:focus {
-		outline: none;
-    }
-}
 .invisible {
 	display: none;
 }
 
-.loading-background {
-    background: #a86957!important;
-    opacity: 1!important;
+// Transition Styles
+.flip-enter-active {
+  transition: all 0.4s ease;
 }
+  
+.flip-leave-active {
+  display: none;
+}
+  
+.flip-enter, .flip-leave {
+  transform: rotateY(180deg);
+  opacity: 0;
+}
+
+
+
+
