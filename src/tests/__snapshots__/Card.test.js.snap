@@ -2,34 +2,44 @@
 
 exports[`Card.test.js has the expected html structure 1`] = `
 <div
-  id="card"
+  class="jumbotron"
 >
   <h1>
     English-German Flash Cards
   </h1>
-  <select>
-    <option
-      value=""
-    >
-      Select type of cards...
-    </option>
-    <option>
-      Animal
-    </option>
-    <option>
-      Cuisine
-    </option>
-    <option>
-      Geography
-    </option>
-  </select>
   <div
-    class="showAll"
+    class="options"
   >
-    <input
-      type="checkbox"
-    />
-     Show All Cards
+    <select>
+      <option
+        value=""
+      >
+        Select type of cards...
+      </option>
+      <option>
+        Cuisine
+      </option>
+      <option>
+        Geography
+      </option>
+      <option>
+        Animal
+      </option>
+    </select>
+    <div
+      class="showAll"
+    >
+      <input
+        type="checkbox"
+      />
+       Show All Cards
+    </div>
+    <button>
+      All English
+    </button>
+    <button>
+      All German
+    </button>
   </div>
   <ul
     class="card-list"
@@ -41,7 +51,7 @@ exports[`Card.test.js has the expected html structure 1`] = `
         class="card"
         name="flip"
       >
-        Mountain
+        Goat
         <span
           class="language"
         >
@@ -81,7 +91,7 @@ exports[`Card.test.js has the expected html structure 1`] = `
         class="card"
         name="flip"
       >
-        Goat
+        Mountain
         <span
           class="language"
         >

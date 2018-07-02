@@ -8,11 +8,11 @@ describe('Card.test.js', () => {
 	beforeEach(() => {
 		cmp = shallow(Card, {})
 		cmp.setData({cards: [
-								{english: 'Beer', german: 'Bier', type: 'Cuisine', flipped: false, visible: true},
-								{english: 'Mountain', german: 'Berg', type: 'Geography', flipped: false, visible: true},
-								{english: 'Goat', german: 'Ziege', type: 'Animal', flipped: false, visible: true}
-							], 
-								checked: false, type: '', visible: true})
+			{english: 'Beer', german: 'Bier', type: 'Cuisine', flipped: false, visible: true},
+			{english: 'Mountain', german: 'Berg', type: 'Geography', flipped: false, visible: true},
+			{english: 'Goat', german: 'Ziege', type: 'Animal', flipped: false, visible: true}
+		], 
+		checked: false, type: '', visible: true})
 	})
 	
 	it('has the expected html structure', () => {

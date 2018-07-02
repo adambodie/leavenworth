@@ -2,6 +2,14 @@
 
 exports[`App.test.js has the expected html structure 1`] = `
 <div
-  class="owl-carousel owl-theme"
-/>
+  class="jumbotron"
+>
+  <!---->
+  <h1>
+    Photo Gallery
+  </h1>
+  <div
+    class="owl-carousel owl-theme"
+  />
+</div>
 `;
