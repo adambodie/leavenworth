@@ -13,14 +13,15 @@ describe('Card.test.js', () => {
 			{english: 'Goat', german: 'Ziege', type: 'Animal', flipped: false, visible: true}
 		], 
 		checked: false, type: '', visible: true})
-	})
+	});
 	
 	it('has the expected html structure', () => {
-		expect(cmp.element).toMatchSnapshot()
-	})
+		expect(cmp.element).toMatchSnapshot();
+	});
 	it('should have a length of 3', () => {
-		cmp.vm.types = [];
-		expect(cmp.vm.uniqueCardsList).toContain('Animal')
 		expect(cmp.vm.uniqueCardsList.length).toBe(3)
-	})
+	});
+	it('should contain Animal', () => {
+		expect(cmp.vm.uniqueCardsList).toContain('Animal')
+	});	
 })

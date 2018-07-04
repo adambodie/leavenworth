@@ -17,13 +17,13 @@ exports[`Card.test.js has the expected html structure 1`] = `
         Select type of cards...
       </option>
       <option>
-        Cuisine
-      </option>
-      <option>
         Geography
       </option>
       <option>
         Animal
+      </option>
+      <option>
+        Cuisine
       </option>
     </select>
     <div
@@ -51,7 +51,7 @@ exports[`Card.test.js has the expected html structure 1`] = `
         class="card"
         name="flip"
       >
-        Goat
+        Beer
         <span
           class="language"
         >
@@ -71,7 +71,7 @@ exports[`Card.test.js has the expected html structure 1`] = `
         class="card"
         name="flip"
       >
-        Beer
+        Goat
         <span
           class="language"
         >

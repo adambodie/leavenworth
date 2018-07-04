@@ -1,7 +1,15 @@
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 const Vue = require('vue');
+const Intro = require('./src/vue/intro.vue');
 const App = require('./src/vue/app.vue');
 const Card = require('./src/vue/card.vue');
+
+new Vue({
+		el: '#intro',
+		render: function(createElement) {
+			return createElement(Intro);
+		}
+})
 
 new Vue({
 		el: '#app',
@@ -17,7 +25,7 @@ new Vue({
 		}
 })
 
-},{"./src/vue/app.vue":34,"./src/vue/card.vue":35,"vue":33}],2:[function(require,module,exports){
+},{"./src/vue/app.vue":34,"./src/vue/card.vue":35,"./src/vue/intro.vue":36,"vue":33}],2:[function(require,module,exports){
 module.exports = require('./lib/axios');
 },{"./lib/axios":4}],3:[function(require,module,exports){
 (function (process){
@@ -10603,6 +10611,44 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     hotAPI.createRecord("data-v-1ae64cee", __vue__options__)
   } else {
     hotAPI.reload("data-v-1ae64cee", __vue__options__)
+  }
+})()}
+},{"vue":33,"vue-hot-reload-api":31}],36:[function(require,module,exports){
+;(function(){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _vue = require('vue');
+
+var _vue2 = _interopRequireDefault(_vue);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = {
+	name: 'Intro',
+	data: function data() {
+		return {
+			title: "Introduction to Leavenworth"
+		};
+	}
+};
+})()
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"jumbotron"},[_c('h1',[_vm._v(_vm._s(_vm.title))]),_vm._m(0)])}
+__vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"intro-body"},[_c('div',{staticClass:"paragraph"},[_c('p',[_vm._v("Located in Chelan County in Central Washington, Leavenworth, with a population of about 2,000, would likely be just another city, if not for its town center, modeled on a Bavarian village.  Tucked inside the North Cascades, Leavenworth provides a breathtaking mix of German based culture, scenic views reminiscent of the German Alps, and when not too busy, a peaceful getaway from the hectic life.  Having never been to Leavenworth, but having been to Austria, also to Oregon's Bavarian town, Mt. Angel, I took the journey to Leavenworth to see what all the fuss is about.")]),_c('p',[_vm._v("Two hours east of Seattle, heading towards Leavenworth via the Snoqualmie Pass along I-90, provided me a stark contrast between the stormy west side and the much drier east side.  While heading up US-97 towards Leavenworth, the mountains got more rugged, but still had plenty of green to them.  Eventually, reaching the intersection with US-2, it felt eerily different, almost as if I was really in the German backcountry.  Minutes later, with plenty of others heading into Leavenworth, I finally got the opportunity to enter the European like town center.  Having been to Austria, Leavenworth clearly had the feel of a Bavarian village, but at the same time, clearly had the tourist vibe.")]),_c('p',[_vm._v("While exploring Leavenworth with the crowds felt like a tourist trap, the following morning, while walking in town on an early Monday morning, had a far more peaceful setting, almost as if I was in a German ghost town.  Gone were the tourists left and right, instead was the sound of quietness.  Leaving the town center and walking along the Wenatchee River also provided a peaceful state of mind.  The only thing that ruined that mood was the sign indicating possibly Bear activity on the island in the river.")]),_c('p',[_vm._v("Leaving Leavenworth, I was quickly reminded how unique the area was, as I ventured into the larger city of Wenatchee, which, except for all the references to Apples, felt like your typical dry Eastern Washington town (see Yakima for more details).  There were a few bright spots along the way back, mainly around the Columbia River and the mountains around the oddly charming city of Ellensburg.  In all, a wonderful and unexpected trip to Leavenworth.  Prost!")])]),_c('div',{staticClass:"map"},[_c('img',{attrs:{"src":"../images/map.png","alt":"map"}})])])}]
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-b788697a", __vue__options__)
+  } else {
+    hotAPI.reload("data-v-b788697a", __vue__options__)
   }
 })()}
 },{"vue":33,"vue-hot-reload-api":31}]},{},[1]);
