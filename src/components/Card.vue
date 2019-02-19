@@ -1,31 +1,43 @@
-<template lang="pug">
-    div.jumbotron
-      h1 English-German Flash Cards
-      div.options
-        select(v-on:change="filterList")
-          option(value="") Select type of cards...
-          option(v-for="item in uniqueCardsList") {{item}}
-        .showAll
-          input(type="checkbox" v-model="checked" v-on:change="showAllCards()" )
-          |  Show All Cards
-        button(v-on:click="allEnglish()") All English
-        button(v-on:click="allGerman()") All German
-      ul.card-list
-        li(v-bind:class="{ invisible: !card.visible }" v-show="type === '' || type === card.type" v-for="(card, index) in shuffleCards"  v-on:click="toggleLanguage(card)")
-          transition(name="flip")
-            p(v-if="!card.flipped" key="english").card {{card.english}}
-              span.language English
-              span(v-on:click="showCards(card)").delete-card X
-            p(v-else key="german").card {{card.german}}
-              span.language German
-              span(v-on:click="showCards(card)").delete-card X
+<template>
+	<div class="jumbotron">
+		<h1>English-German Flash Cards</h1>
+		<div class="options">
+			<select v-on:change="filterList">
+				<option value="">Select type of cards...</option>
+				<option v-for="(item, index) in uniqueCardsList" :key="index">{{item}}</option>
+			</select>
+			<div class="showAll">
+				<input type="checkbox" v-model="checked" v-on:change="showAllCards()" /> Show All Cards
+			</div>
+			<button v-on:click="allEnglish()">All English</button>
+			<button v-on:click="allGerman()">All German</button>
+		</div>
+		<ul class="card-list">
+			<li 
+				v-bind:class="{ invisible: !card.visible }" 
+				v-show="type === '' || type === card.type" 
+				v-for="(card, index) in shuffleCards" 
+				:key="index" 
+				v-on:click="toggleLanguage(card)"
+			>
+				<transition name="flip">
+					<p class="card" v-if="!card.flipped" key="english">{{card.english}}
+						<span class="language">English</span>
+						<span class="delete-card" v-on:click="showCards(card)">X</span>
+					</p>
+					<p class="card" v:bind:v-else="v-else" key="german">{{card.german}}
+						<span class="language">German</span>
+						<span class="delete-card" v-on:click="showCards(card)">X</span>
+					</p>
+				</transition>
+			</li>
+	</ul>
+</div>
 </template>
 
 <script>
-import Vue from 'vue'
 
 export default {
-	name: 'Card', 
 	data () {
 		return {
 			cards: [

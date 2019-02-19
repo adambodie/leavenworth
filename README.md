@@ -1,13 +1,29 @@
-Leavenworth: The Bavarian Experience in Washington
-==================================================
+# leavenworth-cards
 
-## Technologies Used
-* Vue
-* Browserify
-* Express
-* Pug
-* Jest
-* Gulp
-* Less
+## Project setup
+```
+yarn install
+```
 
-Previously learning Vue on the fly, I opted to learn more specifics of Vue with this project. The photo gallery I used the Owl-Carousel dependency to use a different carousel. The flash cards is based off the Vue Basics course on Team Treehouse, expanding on the original content to add additional methods. Finally, I focused on both basic Vue syntax mixed with Single File Components to differentiate between the two. 
+### Compiles and hot-reloads for development
+```
+yarn run serve
+```
+
+### Compiles and minifies for production
+```
+yarn run build
+```
+
+### Run your tests
+```
+yarn run test
+```
+
+### Lints and fixes files
+```
+yarn run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
