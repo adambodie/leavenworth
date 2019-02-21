@@ -5,7 +5,8 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "test": "jest"
   },
   "dependencies": {
     "vue": "^2.5.22",
@@ -15,15 +16,31 @@
     "@vue/cli-plugin-babel": "^3.4.0",
     "@vue/cli-plugin-eslint": "^3.4.0",
     "@vue/cli-service": "^3.4.0",
+    "@vue/test-utils": "^1.0.0-beta.29",
     "axios-mock-adapter": "^1.16.0",
     "babel-eslint": "^10.0.1",
+    "babel-jest": "^24.1.0",
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0",
     "jest": "^24.1.0",
     "jest-vue-preprocessor": "^1.4.0",
     "less": "^3.9.0",
     "less-loader": "^4.1.0",
-    "vue-template-compiler": "^2.5.21",
-    "vue-test-utils": "^1.0.0-beta.11"
+    "vue-jest": "^3.0.3",
+    "vue-template-compiler": "^2.5.21"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "vue"
+    ],
+    "transform": {
+      ".*\\.(vue)$": "vue-jest",
+      "^.+\\.js$": "<rootDir>/node_modules/babel-jest"
+    },
+    "moduleNameMapper": {
+      "^@/(.*)$": "<rootDir>/src/$1"
+    }
   }
 }
