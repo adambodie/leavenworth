@@ -1,15 +1,11 @@
 <template>
 	<div>
-	<div class="jumbotron">
-		<h1>English-German Flash Cards</h1>
-	</div>
 		<div class="options">
+			<div class="type">
 			<select v-on:change="filterList">
 				<option value="">Select type of cards...</option>
 				<option v-for="(item, index) in uniqueCardsList" :key="index">{{item}}</option>
 			</select>
-			<div class="showAll">
-				<input type="checkbox" v-model="checked" v-on:change="showAllCards()" /> Show All Cards
 			</div>
 			<div class="filter">
 				<select v-model="value" v-on:change="filter()">
@@ -22,9 +18,9 @@
 		</div>
 		<transition-group name="flip" tag="ul" class="card-list">
 			<li 
-				v-bind:class="{ invisible: !card.visible }" 
-				v-show="type === '' || type === card.type" 
-				v-for="card in shuffleCards" 
+				v-bind:class="{ invisible: !card.visible }"
+				v-show="(index <= value && type === '') || type === card.type" 
+				v-for="(card, index) in shuffleCards" 
 				:key="card.id"
 			>
 				<vue-flip :active-click="true" width="259px" height="345px" transition="0.4s" >
@@ -84,14 +80,12 @@ export default {
 			],
 			type: '',
 			visible: true,
-			value: '',
-			checked: false
+			value: '9'
 		}
 	},
 	methods: {
 		filterList: function(){
 			this.value = '';
-			this.checked = true;
 			this.type = event.target.value;
 		},
 		filter: function(){
@@ -107,13 +101,7 @@ export default {
 		},
 		showCards: function(card) {
 			card.visible = !card.visible;
-		},
-		showAllCards: function() {
-			this.value = '';
-			if (this.checked === true) {
-				this.cards.forEach((card) => card.visible = true);
-			}
-		},
+		}
 	},
 	computed: {
 		uniqueCardsList: function() {
