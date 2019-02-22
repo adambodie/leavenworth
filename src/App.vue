@@ -1,16 +1,19 @@
 <template>
   <div id="app">
+    <Header />
     <Card />
   </div>
 </template>
 
 <script>
-import Card from './components/Card.vue'
+import Header from './components/Header'
+import Card from './components/Card'
 
 export default {
   name: 'app',
   components: {
-    Card
+    Card,
+    Header
   }
 }
 </script>
@@ -22,6 +25,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
