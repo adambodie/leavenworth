@@ -45,33 +45,8 @@ body {
 	}
 }
 
-// Intro Styles
-.intro-body {
-	display: flex;
-}
-
-.paragraph {
-	padding: 20px;
-}
-
-.map {
-	img {
-		padding: 20px;
-	}
-}
-
-// Footer Styles
-#footer {
-	padding: 10px;
-	background-color: @banner-color;
-	font-family: @font-family;
-	color: white;
-}
-
-
 // Jumbotron Styles
 .jumbotron {
-	margin: 30px;
 	box-shadow: 4px 4px 8px #23201b;
 	h1 {
 		.title-font-shadow;
@@ -83,65 +58,7 @@ body {
 	}
 }
 
-// Loading Background Styles
-.loading-background {
-    background: #a86957!important;
-    opacity: 1!important;
-}
 
-
-// Photo Gallery Styles
-.caption {
-	position: absolute;
-	left: 0;
-	bottom: 10px;
-	padding: 10px 10px;
-	font-size: 14px;
-	.title-font-shadow;
-	text-align: center;
-	width: 100%;
-}
-
-.owl-carousel .owl-item img {
-    display: block;
-    width: auto;
-    height: 450px!important;
-    margin: 0 auto;
-}
-
-.owl-item {
-	img {
-		opacity: 0.5;
-	}
-	.caption {
-		display: none;
-	}
-}
-
-.owl-nav {
-	margin-top: 0;
-}
-.center {
-	img {
-		opacity: 1;
-	}
-	.caption {
-		display: block;
-	}
-}
-
-.owl-theme .owl-nav [class*=owl-] {
-    font-size: 36px!important;
-    margin: 20px;
-    background: @banner-color!important;
-    width: 50px;
-    height: 50px;
-    border-radius: 100%;
-    box-shadow: 2px 2px 4px black;
-    &:focus {
-		outline: none;
-    }
-}
 
 // Cards Styles
 .options {
@@ -155,6 +72,11 @@ ul {
     flex-flow: wrap;
     justify-content: center;
   }
+
+.card-list {
+	box-shadow: 4px 4px 8px #23201b;
+	margin-bottom: 50px;
+}
 
 li {
 	list-style-type: none;

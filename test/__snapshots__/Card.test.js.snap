@@ -1,0 +1,222 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card.test.js has the expected html structure 1`] = `
+<div
+  class="jumbotron"
+>
+  <h1>
+    English-German Flash Cards
+  </h1>
+   
+  <div
+    class="options"
+  >
+    <select>
+      <option
+        value=""
+      >
+        Select type of cards...
+      </option>
+       
+      <option>
+        Cuisine
+      </option>
+      <option>
+        Geography
+      </option>
+      <option>
+        Animal
+      </option>
+    </select>
+     
+    <div
+      class="showAll"
+    >
+      <input
+        type="checkbox"
+      />
+       Show All Cards
+			
+    </div>
+     
+    <div
+      class="filter"
+    >
+      <select>
+        <option
+          value=""
+        >
+          Filter by Amount...
+        </option>
+         
+        <option
+          value="0"
+        >
+          
+						1
+					
+        </option>
+        <option
+          value="1"
+        >
+          
+						2
+					
+        </option>
+        <option
+          value="2"
+        >
+          
+						3
+					
+        </option>
+      </select>
+    </div>
+  </div>
+   
+  <span
+    class="card-list"
+    name="flip"
+    tag="ul"
+  >
+    <li
+      class=""
+    >
+      <vue-flip-stub
+        activeclick="true"
+        height="300px"
+        transition="0.4s"
+        width="225px"
+      >
+        <p
+          class="card"
+        >
+          Goat
+						
+          <span
+            class="language"
+          >
+            English
+          </span>
+           
+          <span
+            class="delete-card"
+          >
+            X
+          </span>
+        </p>
+         
+        <p
+          class="card"
+        >
+          Ziege
+						
+          <span
+            class="language"
+          >
+            German
+          </span>
+           
+          <span
+            class="delete-card"
+          >
+            X
+          </span>
+        </p>
+      </vue-flip-stub>
+    </li>
+    <li
+      class=""
+    >
+      <vue-flip-stub
+        activeclick="true"
+        height="300px"
+        transition="0.4s"
+        width="225px"
+      >
+        <p
+          class="card"
+        >
+          Beer
+						
+          <span
+            class="language"
+          >
+            English
+          </span>
+           
+          <span
+            class="delete-card"
+          >
+            X
+          </span>
+        </p>
+         
+        <p
+          class="card"
+        >
+          Bier
+						
+          <span
+            class="language"
+          >
+            German
+          </span>
+           
+          <span
+            class="delete-card"
+          >
+            X
+          </span>
+        </p>
+      </vue-flip-stub>
+    </li>
+    <li
+      class=""
+    >
+      <vue-flip-stub
+        activeclick="true"
+        height="300px"
+        transition="0.4s"
+        width="225px"
+      >
+        <p
+          class="card"
+        >
+          Mountain
+						
+          <span
+            class="language"
+          >
+            English
+          </span>
+           
+          <span
+            class="delete-card"
+          >
+            X
+          </span>
+        </p>
+         
+        <p
+          class="card"
+        >
+          Berg
+						
+          <span
+            class="language"
+          >
+            German
+          </span>
+           
+          <span
+            class="delete-card"
+          >
+            X
+          </span>
+        </p>
+      </vue-flip-stub>
+    </li>
+  </span>
+</div>
+`;
