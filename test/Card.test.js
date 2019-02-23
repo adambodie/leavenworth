@@ -1,29 +1,16 @@
 import Vue from 'vue'
-import Card from '../src/components/Card.vue'
-import { shallowMount } from '@vue/test-utils'
+import { createLocalVue } from '@vue/test-utils'
+import Vuex from 'vuex'
+import cardStore from '../src/store/index';
+import Card from '../src/components/Card.vue';
+import { mount } from '@vue/test-utils';
+import { cloneDeep } from 'lodash'
 
-describe('Card.test.js', () => {
-	let cmp, vm
-	
-	beforeEach(() => {
-		cmp = shallowMount(Card, {})
-		cmp.setData({cards: [
-			{english: 'Beer', german: 'Bier', type: 'Cuisine', flipped: false, visible: true},
-			{english: 'Mountain', german: 'Berg', type: 'Geography', flipped: false, visible: true},
-			{english: 'Goat', german: 'Ziege', type: 'Animal', flipped: false, visible: true}
-		], 
-		checked: false, type: '', visible: true})
-	});
-	
-	it('has the expected html structure', () => {
-		expect(cmp.element).toMatchSnapshot();
-	});
-	it('should have a length of 3', () => {
-		expect(cmp.vm.uniqueCardsList.length).toBe(3)
-	});
-	it('should contain Animal', () => {
-		expect(cmp.vm.uniqueCardsList).toContain('Animal')
-	});	
+test('increments "count" value when "increment" is commited', () => {
+  const localVue = createLocalVue()
+  localVue.use(Vuex)
+  const store = new Vuex.Store(cloneDeep(cardStore));
+  expect(store.state.value).toBe(10)
 })
 
 function sum(a, b) {
