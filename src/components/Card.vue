@@ -35,38 +35,28 @@
 				</vue-flip>
 			</li>
 		</transition-group>
-</div>
-
+	</div>
 </template>
 
 <script>
 import VueFlip from 'vue-flip';
-import { mapState } from 'vuex';
+import { mapState, mapMutations } from 'vuex';
 
 export default {
 	components: {
 		'vue-flip': VueFlip
 	},
-	methods: {
+	methods: mapMutations({
 		filterList: function(){
-			this.value = '';
-			this.type = event.target.value;
+			this.$store.commit('filterList');
 		},
 		filter: function(){
-			this.type = '';
-			this.value = event.target.value;
-			this.checked = false;
-			this.cards.forEach((card, index) => {
-				if (this.value === 'Filter by Amount...'){
-					card.visible = true;
-				} 
-				card.visible = (index > this.value) ? false : true
-			});
+			this.$store.commit('filter');
 		},
 		showCards: function(card) {
-			card.visible = !card.visible;
+			this.$store.commit('showCards', card);
 		}
-	},
+	}),
 	computed: mapState({
 		cards: state => state.cards,
 		value: state => state.value,

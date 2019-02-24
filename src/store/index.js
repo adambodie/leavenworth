@@ -28,10 +28,39 @@ export default {
 			{english: 'Pipe', german: 'Rohr', type: 'Tool', visible: true, id: 25},
 			{english: 'Waitress', german: 'Kellnerin', type: 'Person', visible: true, id: 26},
 			{english: 'Icicle', german: 'Eiszapfen', type: 'Tool', visible: true, id: 27},
-			{english: 'Chocolate', german: 'Shockolade', type: 'Cuisine', visible: true, id: 28}
+			{english: 'Chocolate', german: 'Shockolade', type: 'Cuisine', visible: true, id: 28},
+			{english: 'Dancer', german: 'Tänzer', type: 'Person', visible: true, id: 29},
+			{english: 'Squirrel', german: 'Eichhörnchen', type: 'Animal', visible: true, id: 30},
+			{english: 'Bicycle', german: 'Fahrrad', type: 'Transportation', visible: true, id: 31},
+			{english: 'Thanks', german: 'Vielen Dank', type: 'Greeting', visible: true, id: 32},
+			{english: 'Snow', german: 'Schnee', type: 'Weather', visible: true, id: 33},
+			{english: 'Shop', german: 'Geschäft', type: 'Place', visible: true, id: 34},
+			{english: 'French Fries', german: 'Pommes Frites', type: 'Cuisine', visible: true, id: 35},
+			{english: 'Hospital', german: 'Krankenhaus', type: 'Place', visible: true, id: 36},
+			{english: 'Vegetable', german: 'Gemüse', type: 'Plant', visible: true, id: 37},
+			{english: 'Chef', german: 'Koch', type: 'Person', visible: true, id: 38},
+			{english: 'Shrub', german: 'Strauch', type: 'Plant', visible: true, id: 39},
+			{english: 'Spoon', german: 'Löffel', type: 'Tool', visible: true, id: 40},
 		],
 		value: 9,
 		type: '',
 		visible: true
+	},
+	mutations: {
+		showCards: (state, payload) => state.cards[payload].visible = !state.cards[payload].visible,
+		filterList: (state) => {
+			state.value = '';
+			state.type = event.target.value;
+		},
+		filter: (state) => {
+			state.type = '';
+			state.value = event.target.value;
+			state.cards.forEach((card, index) => {
+				if (state.value === 'Filter by Amount...'){
+					card.visible = true;
+				} 
+				card.visible = (index > state.value) ? false : true
+			});
+		},		
 	}
 }
