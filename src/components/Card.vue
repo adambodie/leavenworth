@@ -43,16 +43,8 @@
 import VueFlip from 'vue-flip';
 
 export default {
-
-  components: {
-    'vue-flip': VueFlip
-  },
-	data () {
-		return {
-			type: '',
-			visible: true,
-			value: '9'
-		}
+	components: {
+		'vue-flip': VueFlip
 	},
 	methods: {
 		filterList: function(){
@@ -77,6 +69,15 @@ export default {
 	computed: {
 		cards () {
 			return this.$store.state.cards
+		},
+		value () {
+			return this.$store.state.value
+		},
+		type () {
+			return this.$store.state.type
+		},
+		visible () {
+			return this.$store.state.visible
 		},
 		uniqueCardsList: function() {
 			const types = [];
