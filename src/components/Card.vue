@@ -41,6 +41,7 @@
 
 <script>
 import VueFlip from 'vue-flip';
+import { mapState } from 'vuex';
 
 export default {
 	components: {
@@ -66,19 +67,11 @@ export default {
 			card.visible = !card.visible;
 		}
 	},
-	computed: {
-		cards () {
-			return this.$store.state.cards
-		},
-		value () {
-			return this.$store.state.value
-		},
-		type () {
-			return this.$store.state.type
-		},
-		visible () {
-			return this.$store.state.visible
-		},
+	computed: mapState({
+		cards: state => state.cards,
+		value: state => state.value,
+		type: state => state.type,
+		visible: state => state.visible,
 		uniqueCardsList: function() {
 			const types = [];
 			this.cards.forEach((card) => {
@@ -100,6 +93,6 @@ export default {
 			}
 			return array;
 		}
-	}
+	})
 }
 </script>
