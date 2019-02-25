@@ -8,7 +8,7 @@
 			</select>
 			</div>
 			<div class="filter">
-				<select v-model="value" v-on:change="filter()">
+				<select v-on:change="filter()">
 					<option value="">Filter by Amount...</option>
 					<option v-for="(card, index) in cards" v-bind:value="index" :key="index" >
 						{{ index + 1 }}
@@ -47,13 +47,13 @@ export default {
 		'vue-flip': VueFlip
 	},
 	methods: mapMutations({
-		filterList: function(){
+		filterList(){
 			this.$store.commit('filterList');
 		},
-		filter: function(){
+		filter(){
 			this.$store.commit('filter');
 		},
-		showCards: function(card) {
+		showCards(card) {
 			this.$store.commit('showCards', card);
 		}
 	}),
@@ -62,7 +62,7 @@ export default {
 		value: state => state.value,
 		type: state => state.type,
 		visible: state => state.visible,
-		uniqueCardsList: function() {
+		uniqueCardsList() {
 			const types = [];
 			this.cards.forEach((card) => {
 				if(!types.includes(card.type)) {
@@ -71,7 +71,7 @@ export default {
 			});
 			return types;
 		},
-		shuffleCards: function() {
+		shuffleCards() {
 			const array = this.cards;
 			let currentIndex = array.length, temporaryValue, randomIndex;
 			while (0 !== currentIndex) {
