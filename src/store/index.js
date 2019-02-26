@@ -1,5 +1,9 @@
-export default {
-	state: {
+import Vue from "vue";
+import Vuex from "vuex";
+
+Vue.use(Vuex);
+
+export const state = {
 		cards: [
 			{english: 'Beer', german: 'Bier', type: 'Cuisine', visible: true, id: 1},
 			{english: 'Mountain', german: 'Berg', type: 'Geography', visible: true, id: 2},
@@ -45,14 +49,15 @@ export default {
 		value: 9,
 		type: '',
 		visible: true
-	},
-	mutations: {
-		showCards: (state, payload) => state.cards[payload].visible = !state.cards[payload].visible,
-		filterList: (state) => {
+};
+
+export const mutations = {
+		removeCard: (state, payload) => state.cards[payload].visible = !state.cards[payload].visible,
+		filterListByType: (state) => {
 			state.value = '';
 			state.type = event.target.value;
 		},
-		filter: (state) => {
+		filterListByAmount: (state) => {
 			state.type = '';
 			state.value = event.target.value;
 			state.cards.forEach((card, index) => {
@@ -61,6 +66,10 @@ export default {
 				} 
 				card.visible = (index > state.value) ? false : true
 			});
-		},		
-	}
-}
+		}
+};
+
+export default new Vuex.Store({
+  state,
+  mutations
+});

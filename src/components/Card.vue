@@ -2,13 +2,13 @@
 	<div>
 		<div class="options">
 			<div class="type">
-			<select v-on:change="filterList">
+			<select v-on:change="filterListByType">
 				<option value="">Select type of cards...</option>
 				<option v-for="(item, index) in uniqueCardsList" :key="index">{{item}}</option>
 			</select>
 			</div>
 			<div class="filter">
-				<select v-on:change="filter()">
+				<select v-on:change="filterListByAmount">
 					<option value="">Filter by Amount...</option>
 					<option v-for="(card, index) in cards" v-bind:value="index" :key="index" >
 						{{ index + 1 }}
@@ -26,11 +26,11 @@
 				<vue-flip :active-click="true" width="259px" height="345px" transition="0.4s" >
 					<p slot="front" class="card" key="english">{{card.english}}
 						<span class="language">English</span>
-						<span class="delete-card" v-on:click="showCards(card)">X</span>
+						<span class="delete-card" v-on:click="removeCard(card)">X</span>
 					</p>
 					<p slot="back" class="card" key="german">{{card.german}}
 						<span class="language">German</span>
-						<span class="delete-card" v-on:click="showCards(card)">X</span>
+						<span class="delete-card" v-on:click="removeCard(card)">X</span>
 					</p>
 				</vue-flip>
 			</li>
@@ -47,11 +47,11 @@ export default {
 		'vue-flip': VueFlip
 	},
 	methods: mapMutations({
-		filterList(){
-			this.$store.commit('filterList');
+		filterListByType(){
+			this.$store.commit('filterListByType');
 		},
-		filter(){
-			this.$store.commit('filter');
+		filterListByAmount(){
+			this.$store.commit('filterListByAmount');
 		},
 		showCards(card) {
 			this.$store.commit('showCards', card);

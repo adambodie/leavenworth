@@ -45,6 +45,9 @@ exports[`returns value from store 1`] = `
         <option>
           Tool
         </option>
+        <option>
+          Plant
+        </option>
       </select>
     </div>
      
@@ -62,197 +65,281 @@ exports[`returns value from store 1`] = `
           value="0"
         >
           
-						1
-					
+					1
+				
         </option>
         <option
           value="1"
         >
           
-						2
-					
+					2
+				
         </option>
         <option
           value="2"
         >
           
-						3
-					
+					3
+				
         </option>
         <option
           value="3"
         >
           
-						4
-					
+					4
+				
         </option>
         <option
           value="4"
         >
           
-						5
-					
+					5
+				
         </option>
         <option
           value="5"
         >
           
-						6
-					
+					6
+				
         </option>
         <option
           value="6"
         >
           
-						7
-					
+					7
+				
         </option>
         <option
           value="7"
         >
           
-						8
-					
+					8
+				
         </option>
         <option
           value="8"
         >
           
-						9
-					
+					9
+				
         </option>
         <option
           value="9"
         >
           
-						10
-					
+					10
+				
         </option>
         <option
           value="10"
         >
           
-						11
-					
+					11
+				
         </option>
         <option
           value="11"
         >
           
-						12
-					
+					12
+				
         </option>
         <option
           value="12"
         >
           
-						13
-					
+					13
+				
         </option>
         <option
           value="13"
         >
           
-						14
-					
+					14
+				
         </option>
         <option
           value="14"
         >
           
-						15
-					
+					15
+				
         </option>
         <option
           value="15"
         >
           
-						16
-					
+					16
+				
         </option>
         <option
           value="16"
         >
           
-						17
-					
+					17
+				
         </option>
         <option
           value="17"
         >
           
-						18
-					
+					18
+				
         </option>
         <option
           value="18"
         >
           
-						19
-					
+					19
+				
         </option>
         <option
           value="19"
         >
           
-						20
-					
+					20
+				
         </option>
         <option
           value="20"
         >
           
-						21
-					
+					21
+				
         </option>
         <option
           value="21"
         >
           
-						22
-					
+					22
+				
         </option>
         <option
           value="22"
         >
           
-						23
-					
+					23
+				
         </option>
         <option
           value="23"
         >
           
-						24
-					
+					24
+				
         </option>
         <option
           value="24"
         >
           
-						25
-					
+					25
+				
         </option>
         <option
           value="25"
         >
           
-						26
-					
+					26
+				
         </option>
         <option
           value="26"
         >
           
-						27
-					
+					27
+				
         </option>
         <option
           value="27"
         >
           
-						28
-					
+					28
+				
+        </option>
+        <option
+          value="28"
+        >
+          
+					29
+				
+        </option>
+        <option
+          value="29"
+        >
+          
+					30
+				
+        </option>
+        <option
+          value="30"
+        >
+          
+					31
+				
+        </option>
+        <option
+          value="31"
+        >
+          
+					32
+				
+        </option>
+        <option
+          value="32"
+        >
+          
+					33
+				
+        </option>
+        <option
+          value="33"
+        >
+          
+					34
+				
+        </option>
+        <option
+          value="34"
+        >
+          
+					35
+				
+        </option>
+        <option
+          value="35"
+        >
+          
+					36
+				
+        </option>
+        <option
+          value="36"
+        >
+          
+					37
+				
+        </option>
+        <option
+          value="37"
+        >
+          
+					38
+				
+        </option>
+        <option
+          value="38"
+        >
+          
+					39
+				
+        </option>
+        <option
+          value="39"
+        >
+          
+					40
+				
         </option>
       </select>
     </div>
@@ -275,8 +362,8 @@ exports[`returns value from store 1`] = `
         <p
           class="card"
         >
-          Clouds
-						
+          Welcome
+					
           <span
             class="language"
           >
@@ -293,8 +380,8 @@ exports[`returns value from store 1`] = `
         <p
           class="card"
         >
-          Wolken
-						
+          Willkommen
+					
           <span
             class="language"
           >
@@ -321,8 +408,8 @@ exports[`returns value from store 1`] = `
         <p
           class="card"
         >
-          Tree
-						
+          French Fries
+					
           <span
             class="language"
           >
@@ -339,284 +426,8 @@ exports[`returns value from store 1`] = `
         <p
           class="card"
         >
-          Baum
-						
-          <span
-            class="language"
-          >
-            German
-          </span>
-           
-          <span
-            class="delete-card"
-          >
-            X
-          </span>
-        </p>
-      </vue-flip-stub>
-    </li>
-    <li
-      class=""
-    >
-      <vue-flip-stub
-        activeclick="true"
-        height="345px"
-        transition="0.4s"
-        width="259px"
-      >
-        <p
-          class="card"
-        >
-          Flowers
-						
-          <span
-            class="language"
-          >
-            English
-          </span>
-           
-          <span
-            class="delete-card"
-          >
-            X
-          </span>
-        </p>
-         
-        <p
-          class="card"
-        >
-          Blumen
-						
-          <span
-            class="language"
-          >
-            German
-          </span>
-           
-          <span
-            class="delete-card"
-          >
-            X
-          </span>
-        </p>
-      </vue-flip-stub>
-    </li>
-    <li
-      class=""
-    >
-      <vue-flip-stub
-        activeclick="true"
-        height="345px"
-        transition="0.4s"
-        width="259px"
-      >
-        <p
-          class="card"
-        >
-          Pipe
-						
-          <span
-            class="language"
-          >
-            English
-          </span>
-           
-          <span
-            class="delete-card"
-          >
-            X
-          </span>
-        </p>
-         
-        <p
-          class="card"
-        >
-          Rohr
-						
-          <span
-            class="language"
-          >
-            German
-          </span>
-           
-          <span
-            class="delete-card"
-          >
-            X
-          </span>
-        </p>
-      </vue-flip-stub>
-    </li>
-    <li
-      class=""
-    >
-      <vue-flip-stub
-        activeclick="true"
-        height="345px"
-        transition="0.4s"
-        width="259px"
-      >
-        <p
-          class="card"
-        >
-          Bear
-						
-          <span
-            class="language"
-          >
-            English
-          </span>
-           
-          <span
-            class="delete-card"
-          >
-            X
-          </span>
-        </p>
-         
-        <p
-          class="card"
-        >
-          Bär
-						
-          <span
-            class="language"
-          >
-            German
-          </span>
-           
-          <span
-            class="delete-card"
-          >
-            X
-          </span>
-        </p>
-      </vue-flip-stub>
-    </li>
-    <li
-      class=""
-    >
-      <vue-flip-stub
-        activeclick="true"
-        height="345px"
-        transition="0.4s"
-        width="259px"
-      >
-        <p
-          class="card"
-        >
-          Island
-						
-          <span
-            class="language"
-          >
-            English
-          </span>
-           
-          <span
-            class="delete-card"
-          >
-            X
-          </span>
-        </p>
-         
-        <p
-          class="card"
-        >
-          Insel
-						
-          <span
-            class="language"
-          >
-            German
-          </span>
-           
-          <span
-            class="delete-card"
-          >
-            X
-          </span>
-        </p>
-      </vue-flip-stub>
-    </li>
-    <li
-      class=""
-    >
-      <vue-flip-stub
-        activeclick="true"
-        height="345px"
-        transition="0.4s"
-        width="259px"
-      >
-        <p
-          class="card"
-        >
-          Goodbye
-						
-          <span
-            class="language"
-          >
-            English
-          </span>
-           
-          <span
-            class="delete-card"
-          >
-            X
-          </span>
-        </p>
-         
-        <p
-          class="card"
-        >
-          Auf Wiedersehen
-						
-          <span
-            class="language"
-          >
-            German
-          </span>
-           
-          <span
-            class="delete-card"
-          >
-            X
-          </span>
-        </p>
-      </vue-flip-stub>
-    </li>
-    <li
-      class=""
-    >
-      <vue-flip-stub
-        activeclick="true"
-        height="345px"
-        transition="0.4s"
-        width="259px"
-      >
-        <p
-          class="card"
-        >
-          Waterfall
-						
-          <span
-            class="language"
-          >
-            English
-          </span>
-           
-          <span
-            class="delete-card"
-          >
-            X
-          </span>
-        </p>
-         
-        <p
-          class="card"
-        >
-          Wasserfall
-						
+          Pommes Frites
+					
           <span
             class="language"
           >
@@ -644,7 +455,7 @@ exports[`returns value from store 1`] = `
           class="card"
         >
           Library
-						
+					
           <span
             class="language"
           >
@@ -662,7 +473,7 @@ exports[`returns value from store 1`] = `
           class="card"
         >
           Bibliothek
-						
+					
           <span
             class="language"
           >
@@ -689,8 +500,8 @@ exports[`returns value from store 1`] = `
         <p
           class="card"
         >
-          Blackbird
-						
+          Mountain
+					
           <span
             class="language"
           >
@@ -707,8 +518,8 @@ exports[`returns value from store 1`] = `
         <p
           class="card"
         >
-          Amsel
-						
+          Berg
+					
           <span
             class="language"
           >
@@ -725,7 +536,6 @@ exports[`returns value from store 1`] = `
     </li>
     <li
       class=""
-      style="display: none;"
     >
       <vue-flip-stub
         activeclick="true"
@@ -736,8 +546,8 @@ exports[`returns value from store 1`] = `
         <p
           class="card"
         >
-          Cheers
-						
+          Vegetable
+					
           <span
             class="language"
           >
@@ -754,8 +564,8 @@ exports[`returns value from store 1`] = `
         <p
           class="card"
         >
-          Prost
-						
+          Gemüse
+					
           <span
             class="language"
           >
@@ -772,7 +582,190 @@ exports[`returns value from store 1`] = `
     </li>
     <li
       class=""
-      style="display: none;"
+    >
+      <vue-flip-stub
+        activeclick="true"
+        height="345px"
+        transition="0.4s"
+        width="259px"
+      >
+        <p
+          class="card"
+        >
+          Sausage
+					
+          <span
+            class="language"
+          >
+            English
+          </span>
+           
+          <span
+            class="delete-card"
+          >
+            X
+          </span>
+        </p>
+         
+        <p
+          class="card"
+        >
+          Wurst
+					
+          <span
+            class="language"
+          >
+            German
+          </span>
+           
+          <span
+            class="delete-card"
+          >
+            X
+          </span>
+        </p>
+      </vue-flip-stub>
+    </li>
+    <li
+      class=""
+    >
+      <vue-flip-stub
+        activeclick="true"
+        height="345px"
+        transition="0.4s"
+        width="259px"
+      >
+        <p
+          class="card"
+        >
+          Squirrel
+					
+          <span
+            class="language"
+          >
+            English
+          </span>
+           
+          <span
+            class="delete-card"
+          >
+            X
+          </span>
+        </p>
+         
+        <p
+          class="card"
+        >
+          Eichhörnchen
+					
+          <span
+            class="language"
+          >
+            German
+          </span>
+           
+          <span
+            class="delete-card"
+          >
+            X
+          </span>
+        </p>
+      </vue-flip-stub>
+    </li>
+    <li
+      class=""
+    >
+      <vue-flip-stub
+        activeclick="true"
+        height="345px"
+        transition="0.4s"
+        width="259px"
+      >
+        <p
+          class="card"
+        >
+          Nutcracker
+					
+          <span
+            class="language"
+          >
+            English
+          </span>
+           
+          <span
+            class="delete-card"
+          >
+            X
+          </span>
+        </p>
+         
+        <p
+          class="card"
+        >
+          Nussknacker
+					
+          <span
+            class="language"
+          >
+            German
+          </span>
+           
+          <span
+            class="delete-card"
+          >
+            X
+          </span>
+        </p>
+      </vue-flip-stub>
+    </li>
+    <li
+      class=""
+    >
+      <vue-flip-stub
+        activeclick="true"
+        height="345px"
+        transition="0.4s"
+        width="259px"
+      >
+        <p
+          class="card"
+        >
+          Chef
+					
+          <span
+            class="language"
+          >
+            English
+          </span>
+           
+          <span
+            class="delete-card"
+          >
+            X
+          </span>
+        </p>
+         
+        <p
+          class="card"
+        >
+          Koch
+					
+          <span
+            class="language"
+          >
+            German
+          </span>
+           
+          <span
+            class="delete-card"
+          >
+            X
+          </span>
+        </p>
+      </vue-flip-stub>
+    </li>
+    <li
+      class=""
     >
       <vue-flip-stub
         activeclick="true"
@@ -784,7 +777,7 @@ exports[`returns value from store 1`] = `
           class="card"
         >
           Sun
-						
+					
           <span
             class="language"
           >
@@ -802,7 +795,7 @@ exports[`returns value from store 1`] = `
           class="card"
         >
           Sonne
-						
+					
           <span
             class="language"
           >
@@ -830,8 +823,8 @@ exports[`returns value from store 1`] = `
         <p
           class="card"
         >
-          Street
-						
+          Blackbird
+					
           <span
             class="language"
           >
@@ -848,8 +841,8 @@ exports[`returns value from store 1`] = `
         <p
           class="card"
         >
-          Straße
-						
+          Amsel
+					
           <span
             class="language"
           >
@@ -878,7 +871,7 @@ exports[`returns value from store 1`] = `
           class="card"
         >
           Highway
-						
+					
           <span
             class="language"
           >
@@ -896,7 +889,7 @@ exports[`returns value from store 1`] = `
           class="card"
         >
           Autobahn
-						
+					
           <span
             class="language"
           >
@@ -924,8 +917,8 @@ exports[`returns value from store 1`] = `
         <p
           class="card"
         >
-          City Hall
-						
+          Shrub
+					
           <span
             class="language"
           >
@@ -942,8 +935,8 @@ exports[`returns value from store 1`] = `
         <p
           class="card"
         >
-          Rauthaus
-						
+          Strauch
+					
           <span
             class="language"
           >
@@ -971,8 +964,8 @@ exports[`returns value from store 1`] = `
         <p
           class="card"
         >
-          Knight
-						
+          Cheers
+					
           <span
             class="language"
           >
@@ -989,8 +982,8 @@ exports[`returns value from store 1`] = `
         <p
           class="card"
         >
-          Ritter
-						
+          Prost
+					
           <span
             class="language"
           >
@@ -1018,8 +1011,8 @@ exports[`returns value from store 1`] = `
         <p
           class="card"
         >
-          Chocolate
-						
+          Tree
+					
           <span
             class="language"
           >
@@ -1036,8 +1029,8 @@ exports[`returns value from store 1`] = `
         <p
           class="card"
         >
-          Shockolade
-						
+          Baum
+					
           <span
             class="language"
           >
@@ -1065,8 +1058,8 @@ exports[`returns value from store 1`] = `
         <p
           class="card"
         >
-          Beer
-						
+          Bicycle
+					
           <span
             class="language"
           >
@@ -1083,8 +1076,8 @@ exports[`returns value from store 1`] = `
         <p
           class="card"
         >
-          Bier
-						
+          Fahrrad
+					
           <span
             class="language"
           >
@@ -1112,8 +1105,8 @@ exports[`returns value from store 1`] = `
         <p
           class="card"
         >
-          Goat
-						
+          Snow
+					
           <span
             class="language"
           >
@@ -1130,8 +1123,8 @@ exports[`returns value from store 1`] = `
         <p
           class="card"
         >
-          Ziege
-						
+          Schnee
+					
           <span
             class="language"
           >
@@ -1159,8 +1152,8 @@ exports[`returns value from store 1`] = `
         <p
           class="card"
         >
-          Nutcracker
-						
+          Shop
+					
           <span
             class="language"
           >
@@ -1177,8 +1170,8 @@ exports[`returns value from store 1`] = `
         <p
           class="card"
         >
-          Nussknacker
-						
+          Geschäft
+					
           <span
             class="language"
           >
@@ -1206,8 +1199,8 @@ exports[`returns value from store 1`] = `
         <p
           class="card"
         >
-          Waitress
-						
+          Hospital
+					
           <span
             class="language"
           >
@@ -1224,8 +1217,8 @@ exports[`returns value from store 1`] = `
         <p
           class="card"
         >
-          Kellnerin
-						
+          Krankenhaus
+					
           <span
             class="language"
           >
@@ -1253,8 +1246,8 @@ exports[`returns value from store 1`] = `
         <p
           class="card"
         >
-          Sausage
-						
+          Goodbye
+					
           <span
             class="language"
           >
@@ -1271,243 +1264,8 @@ exports[`returns value from store 1`] = `
         <p
           class="card"
         >
-          Wurst
-						
-          <span
-            class="language"
-          >
-            German
-          </span>
-           
-          <span
-            class="delete-card"
-          >
-            X
-          </span>
-        </p>
-      </vue-flip-stub>
-    </li>
-    <li
-      class=""
-      style="display: none;"
-    >
-      <vue-flip-stub
-        activeclick="true"
-        height="345px"
-        transition="0.4s"
-        width="259px"
-      >
-        <p
-          class="card"
-        >
-          Mountain
-						
-          <span
-            class="language"
-          >
-            English
-          </span>
-           
-          <span
-            class="delete-card"
-          >
-            X
-          </span>
-        </p>
-         
-        <p
-          class="card"
-        >
-          Berg
-						
-          <span
-            class="language"
-          >
-            German
-          </span>
-           
-          <span
-            class="delete-card"
-          >
-            X
-          </span>
-        </p>
-      </vue-flip-stub>
-    </li>
-    <li
-      class=""
-      style="display: none;"
-    >
-      <vue-flip-stub
-        activeclick="true"
-        height="345px"
-        transition="0.4s"
-        width="259px"
-      >
-        <p
-          class="card"
-        >
-          River
-						
-          <span
-            class="language"
-          >
-            English
-          </span>
-           
-          <span
-            class="delete-card"
-          >
-            X
-          </span>
-        </p>
-         
-        <p
-          class="card"
-        >
-          Fluss
-						
-          <span
-            class="language"
-          >
-            German
-          </span>
-           
-          <span
-            class="delete-card"
-          >
-            X
-          </span>
-        </p>
-      </vue-flip-stub>
-    </li>
-    <li
-      class=""
-      style="display: none;"
-    >
-      <vue-flip-stub
-        activeclick="true"
-        height="345px"
-        transition="0.4s"
-        width="259px"
-      >
-        <p
-          class="card"
-        >
-          Welcome
-						
-          <span
-            class="language"
-          >
-            English
-          </span>
-           
-          <span
-            class="delete-card"
-          >
-            X
-          </span>
-        </p>
-         
-        <p
-          class="card"
-        >
-          Willkommen
-						
-          <span
-            class="language"
-          >
-            German
-          </span>
-           
-          <span
-            class="delete-card"
-          >
-            X
-          </span>
-        </p>
-      </vue-flip-stub>
-    </li>
-    <li
-      class=""
-      style="display: none;"
-    >
-      <vue-flip-stub
-        activeclick="true"
-        height="345px"
-        transition="0.4s"
-        width="259px"
-      >
-        <p
-          class="card"
-        >
-          Bridge
-						
-          <span
-            class="language"
-          >
-            English
-          </span>
-           
-          <span
-            class="delete-card"
-          >
-            X
-          </span>
-        </p>
-         
-        <p
-          class="card"
-        >
-          Brücke
-						
-          <span
-            class="language"
-          >
-            German
-          </span>
-           
-          <span
-            class="delete-card"
-          >
-            X
-          </span>
-        </p>
-      </vue-flip-stub>
-    </li>
-    <li
-      class=""
-      style="display: none;"
-    >
-      <vue-flip-stub
-        activeclick="true"
-        height="345px"
-        transition="0.4s"
-        width="259px"
-      >
-        <p
-          class="card"
-        >
-          Icicle
-						
-          <span
-            class="language"
-          >
-            English
-          </span>
-           
-          <span
-            class="delete-card"
-          >
-            X
-          </span>
-        </p>
-         
-        <p
-          class="card"
-        >
-          Eiszapfen
-						
+          Auf Wiedersehen
+					
           <span
             class="language"
           >
@@ -1536,7 +1294,7 @@ exports[`returns value from store 1`] = `
           class="card"
         >
           Rain
-						
+					
           <span
             class="language"
           >
@@ -1554,7 +1312,900 @@ exports[`returns value from store 1`] = `
           class="card"
         >
           Regen
-						
+					
+          <span
+            class="language"
+          >
+            German
+          </span>
+           
+          <span
+            class="delete-card"
+          >
+            X
+          </span>
+        </p>
+      </vue-flip-stub>
+    </li>
+    <li
+      class=""
+      style="display: none;"
+    >
+      <vue-flip-stub
+        activeclick="true"
+        height="345px"
+        transition="0.4s"
+        width="259px"
+      >
+        <p
+          class="card"
+        >
+          Waterfall
+					
+          <span
+            class="language"
+          >
+            English
+          </span>
+           
+          <span
+            class="delete-card"
+          >
+            X
+          </span>
+        </p>
+         
+        <p
+          class="card"
+        >
+          Wasserfall
+					
+          <span
+            class="language"
+          >
+            German
+          </span>
+           
+          <span
+            class="delete-card"
+          >
+            X
+          </span>
+        </p>
+      </vue-flip-stub>
+    </li>
+    <li
+      class=""
+      style="display: none;"
+    >
+      <vue-flip-stub
+        activeclick="true"
+        height="345px"
+        transition="0.4s"
+        width="259px"
+      >
+        <p
+          class="card"
+        >
+          Icicle
+					
+          <span
+            class="language"
+          >
+            English
+          </span>
+           
+          <span
+            class="delete-card"
+          >
+            X
+          </span>
+        </p>
+         
+        <p
+          class="card"
+        >
+          Eiszapfen
+					
+          <span
+            class="language"
+          >
+            German
+          </span>
+           
+          <span
+            class="delete-card"
+          >
+            X
+          </span>
+        </p>
+      </vue-flip-stub>
+    </li>
+    <li
+      class=""
+      style="display: none;"
+    >
+      <vue-flip-stub
+        activeclick="true"
+        height="345px"
+        transition="0.4s"
+        width="259px"
+      >
+        <p
+          class="card"
+        >
+          Thanks
+					
+          <span
+            class="language"
+          >
+            English
+          </span>
+           
+          <span
+            class="delete-card"
+          >
+            X
+          </span>
+        </p>
+         
+        <p
+          class="card"
+        >
+          Vielen Dank
+					
+          <span
+            class="language"
+          >
+            German
+          </span>
+           
+          <span
+            class="delete-card"
+          >
+            X
+          </span>
+        </p>
+      </vue-flip-stub>
+    </li>
+    <li
+      class=""
+      style="display: none;"
+    >
+      <vue-flip-stub
+        activeclick="true"
+        height="345px"
+        transition="0.4s"
+        width="259px"
+      >
+        <p
+          class="card"
+        >
+          Street
+					
+          <span
+            class="language"
+          >
+            English
+          </span>
+           
+          <span
+            class="delete-card"
+          >
+            X
+          </span>
+        </p>
+         
+        <p
+          class="card"
+        >
+          Straße
+					
+          <span
+            class="language"
+          >
+            German
+          </span>
+           
+          <span
+            class="delete-card"
+          >
+            X
+          </span>
+        </p>
+      </vue-flip-stub>
+    </li>
+    <li
+      class=""
+      style="display: none;"
+    >
+      <vue-flip-stub
+        activeclick="true"
+        height="345px"
+        transition="0.4s"
+        width="259px"
+      >
+        <p
+          class="card"
+        >
+          Island
+					
+          <span
+            class="language"
+          >
+            English
+          </span>
+           
+          <span
+            class="delete-card"
+          >
+            X
+          </span>
+        </p>
+         
+        <p
+          class="card"
+        >
+          Insel
+					
+          <span
+            class="language"
+          >
+            German
+          </span>
+           
+          <span
+            class="delete-card"
+          >
+            X
+          </span>
+        </p>
+      </vue-flip-stub>
+    </li>
+    <li
+      class=""
+      style="display: none;"
+    >
+      <vue-flip-stub
+        activeclick="true"
+        height="345px"
+        transition="0.4s"
+        width="259px"
+      >
+        <p
+          class="card"
+        >
+          Dancer
+					
+          <span
+            class="language"
+          >
+            English
+          </span>
+           
+          <span
+            class="delete-card"
+          >
+            X
+          </span>
+        </p>
+         
+        <p
+          class="card"
+        >
+          Tänzer
+					
+          <span
+            class="language"
+          >
+            German
+          </span>
+           
+          <span
+            class="delete-card"
+          >
+            X
+          </span>
+        </p>
+      </vue-flip-stub>
+    </li>
+    <li
+      class=""
+      style="display: none;"
+    >
+      <vue-flip-stub
+        activeclick="true"
+        height="345px"
+        transition="0.4s"
+        width="259px"
+      >
+        <p
+          class="card"
+        >
+          Bridge
+					
+          <span
+            class="language"
+          >
+            English
+          </span>
+           
+          <span
+            class="delete-card"
+          >
+            X
+          </span>
+        </p>
+         
+        <p
+          class="card"
+        >
+          Brücke
+					
+          <span
+            class="language"
+          >
+            German
+          </span>
+           
+          <span
+            class="delete-card"
+          >
+            X
+          </span>
+        </p>
+      </vue-flip-stub>
+    </li>
+    <li
+      class=""
+      style="display: none;"
+    >
+      <vue-flip-stub
+        activeclick="true"
+        height="345px"
+        transition="0.4s"
+        width="259px"
+      >
+        <p
+          class="card"
+        >
+          Beer
+					
+          <span
+            class="language"
+          >
+            English
+          </span>
+           
+          <span
+            class="delete-card"
+          >
+            X
+          </span>
+        </p>
+         
+        <p
+          class="card"
+        >
+          Bier
+					
+          <span
+            class="language"
+          >
+            German
+          </span>
+           
+          <span
+            class="delete-card"
+          >
+            X
+          </span>
+        </p>
+      </vue-flip-stub>
+    </li>
+    <li
+      class=""
+      style="display: none;"
+    >
+      <vue-flip-stub
+        activeclick="true"
+        height="345px"
+        transition="0.4s"
+        width="259px"
+      >
+        <p
+          class="card"
+        >
+          Bear
+					
+          <span
+            class="language"
+          >
+            English
+          </span>
+           
+          <span
+            class="delete-card"
+          >
+            X
+          </span>
+        </p>
+         
+        <p
+          class="card"
+        >
+          Bär
+					
+          <span
+            class="language"
+          >
+            German
+          </span>
+           
+          <span
+            class="delete-card"
+          >
+            X
+          </span>
+        </p>
+      </vue-flip-stub>
+    </li>
+    <li
+      class=""
+      style="display: none;"
+    >
+      <vue-flip-stub
+        activeclick="true"
+        height="345px"
+        transition="0.4s"
+        width="259px"
+      >
+        <p
+          class="card"
+        >
+          Knight
+					
+          <span
+            class="language"
+          >
+            English
+          </span>
+           
+          <span
+            class="delete-card"
+          >
+            X
+          </span>
+        </p>
+         
+        <p
+          class="card"
+        >
+          Ritter
+					
+          <span
+            class="language"
+          >
+            German
+          </span>
+           
+          <span
+            class="delete-card"
+          >
+            X
+          </span>
+        </p>
+      </vue-flip-stub>
+    </li>
+    <li
+      class=""
+      style="display: none;"
+    >
+      <vue-flip-stub
+        activeclick="true"
+        height="345px"
+        transition="0.4s"
+        width="259px"
+      >
+        <p
+          class="card"
+        >
+          City Hall
+					
+          <span
+            class="language"
+          >
+            English
+          </span>
+           
+          <span
+            class="delete-card"
+          >
+            X
+          </span>
+        </p>
+         
+        <p
+          class="card"
+        >
+          Rauthaus
+					
+          <span
+            class="language"
+          >
+            German
+          </span>
+           
+          <span
+            class="delete-card"
+          >
+            X
+          </span>
+        </p>
+      </vue-flip-stub>
+    </li>
+    <li
+      class=""
+      style="display: none;"
+    >
+      <vue-flip-stub
+        activeclick="true"
+        height="345px"
+        transition="0.4s"
+        width="259px"
+      >
+        <p
+          class="card"
+        >
+          Pipe
+					
+          <span
+            class="language"
+          >
+            English
+          </span>
+           
+          <span
+            class="delete-card"
+          >
+            X
+          </span>
+        </p>
+         
+        <p
+          class="card"
+        >
+          Rohr
+					
+          <span
+            class="language"
+          >
+            German
+          </span>
+           
+          <span
+            class="delete-card"
+          >
+            X
+          </span>
+        </p>
+      </vue-flip-stub>
+    </li>
+    <li
+      class=""
+      style="display: none;"
+    >
+      <vue-flip-stub
+        activeclick="true"
+        height="345px"
+        transition="0.4s"
+        width="259px"
+      >
+        <p
+          class="card"
+        >
+          Chocolate
+					
+          <span
+            class="language"
+          >
+            English
+          </span>
+           
+          <span
+            class="delete-card"
+          >
+            X
+          </span>
+        </p>
+         
+        <p
+          class="card"
+        >
+          Shockolade
+					
+          <span
+            class="language"
+          >
+            German
+          </span>
+           
+          <span
+            class="delete-card"
+          >
+            X
+          </span>
+        </p>
+      </vue-flip-stub>
+    </li>
+    <li
+      class=""
+      style="display: none;"
+    >
+      <vue-flip-stub
+        activeclick="true"
+        height="345px"
+        transition="0.4s"
+        width="259px"
+      >
+        <p
+          class="card"
+        >
+          Flowers
+					
+          <span
+            class="language"
+          >
+            English
+          </span>
+           
+          <span
+            class="delete-card"
+          >
+            X
+          </span>
+        </p>
+         
+        <p
+          class="card"
+        >
+          Blumen
+					
+          <span
+            class="language"
+          >
+            German
+          </span>
+           
+          <span
+            class="delete-card"
+          >
+            X
+          </span>
+        </p>
+      </vue-flip-stub>
+    </li>
+    <li
+      class=""
+      style="display: none;"
+    >
+      <vue-flip-stub
+        activeclick="true"
+        height="345px"
+        transition="0.4s"
+        width="259px"
+      >
+        <p
+          class="card"
+        >
+          Clouds
+					
+          <span
+            class="language"
+          >
+            English
+          </span>
+           
+          <span
+            class="delete-card"
+          >
+            X
+          </span>
+        </p>
+         
+        <p
+          class="card"
+        >
+          Wolken
+					
+          <span
+            class="language"
+          >
+            German
+          </span>
+           
+          <span
+            class="delete-card"
+          >
+            X
+          </span>
+        </p>
+      </vue-flip-stub>
+    </li>
+    <li
+      class=""
+      style="display: none;"
+    >
+      <vue-flip-stub
+        activeclick="true"
+        height="345px"
+        transition="0.4s"
+        width="259px"
+      >
+        <p
+          class="card"
+        >
+          Goat
+					
+          <span
+            class="language"
+          >
+            English
+          </span>
+           
+          <span
+            class="delete-card"
+          >
+            X
+          </span>
+        </p>
+         
+        <p
+          class="card"
+        >
+          Ziege
+					
+          <span
+            class="language"
+          >
+            German
+          </span>
+           
+          <span
+            class="delete-card"
+          >
+            X
+          </span>
+        </p>
+      </vue-flip-stub>
+    </li>
+    <li
+      class=""
+      style="display: none;"
+    >
+      <vue-flip-stub
+        activeclick="true"
+        height="345px"
+        transition="0.4s"
+        width="259px"
+      >
+        <p
+          class="card"
+        >
+          River
+					
+          <span
+            class="language"
+          >
+            English
+          </span>
+           
+          <span
+            class="delete-card"
+          >
+            X
+          </span>
+        </p>
+         
+        <p
+          class="card"
+        >
+          Fluss
+					
+          <span
+            class="language"
+          >
+            German
+          </span>
+           
+          <span
+            class="delete-card"
+          >
+            X
+          </span>
+        </p>
+      </vue-flip-stub>
+    </li>
+    <li
+      class=""
+      style="display: none;"
+    >
+      <vue-flip-stub
+        activeclick="true"
+        height="345px"
+        transition="0.4s"
+        width="259px"
+      >
+        <p
+          class="card"
+        >
+          Waitress
+					
+          <span
+            class="language"
+          >
+            English
+          </span>
+           
+          <span
+            class="delete-card"
+          >
+            X
+          </span>
+        </p>
+         
+        <p
+          class="card"
+        >
+          Kellnerin
+					
+          <span
+            class="language"
+          >
+            German
+          </span>
+           
+          <span
+            class="delete-card"
+          >
+            X
+          </span>
+        </p>
+      </vue-flip-stub>
+    </li>
+    <li
+      class=""
+      style="display: none;"
+    >
+      <vue-flip-stub
+        activeclick="true"
+        height="345px"
+        transition="0.4s"
+        width="259px"
+      >
+        <p
+          class="card"
+        >
+          Spoon
+					
+          <span
+            class="language"
+          >
+            English
+          </span>
+           
+          <span
+            class="delete-card"
+          >
+            X
+          </span>
+        </p>
+         
+        <p
+          class="card"
+        >
+          Löffel
+					
           <span
             class="language"
           >
