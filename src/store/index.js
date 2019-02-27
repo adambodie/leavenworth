@@ -51,25 +51,31 @@ export const state = {
 		visible: true
 };
 
-export const mutations = {
-		removeCard: (state, payload) => state.cards[payload].visible = !state.cards[payload].visible,
-		filterListByType: (state) => {
-			state.value = '';
-			state.type = event.target.value;
-		},
-		filterListByAmount: (state) => {
-			state.type = '';
-			state.value = event.target.value;
-			state.cards.forEach((card, index) => {
+export const actions = {
+	filterListByType: ({ commit }) => {
+		commit('setValue', ''),
+		commit('setType', event.target.value)
+	},
+	filterListByAmount: ({ commit, state }) => {
+		commit('setValue', event.target.value),
+		commit('setType', ''),
+		state.cards.forEach((card, index) => {
 				if (state.value === 'Filter by Amount...'){
 					card.visible = true;
 				} 
 				card.visible = (index > state.value) ? false : true
 			});
-		}
+	}
+};
+
+export const mutations = {
+		removeCard: (state, payload) => state.cards[payload].visible = !state.cards[payload].visible,
+		setValue: (state, value) => {state.value = value},
+		setType: (state, type) => {state.type = type},
 };
 
 export default new Vuex.Store({
   state,
-  mutations
+  mutations,
+  actions
 });
