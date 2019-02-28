@@ -41,49 +41,30 @@
 
 <script>
 import VueFlip from 'vue-flip';
-import { mapState } from 'vuex';
+import { mapState, mapGetters, mapMutations, mapActions } from 'vuex';
 
 export default {
 	components: {
 		'vue-flip': VueFlip
 	},
 	methods: {
-		filterListByType(){
-			this.$store.dispatch('filterListByType');
-		},
-		filterListByAmount(){
-			this.$store.dispatch('filterListByAmount');
-		},
-		removeCard(card) {
-			this.$store.commit('removeCard', card);
-		}
+		...mapActions([
+			'filterListByType',
+			'filterListByAmount'
+		]),
+		...mapMutations(['removeCard'])
 	},
-	computed: mapState({
-		cards: state => state.cards,
-		value: state => state.value,
-		type: state => state.type,
-		visible: state => state.visible,
-		uniqueCardsList() {
-			const types = [];
-			this.cards.forEach((card) => {
-				if(!types.includes(card.type)) {
-					types.push(card.type);
-				}
-			});
-			return types;
-		},
-		shuffleCards() {
-			const array = this.cards;
-			let currentIndex = array.length, temporaryValue, randomIndex;
-			while (0 !== currentIndex) {
-				randomIndex = Math.floor(Math.random() * currentIndex);
-				currentIndex -= 1;
-				temporaryValue = array[currentIndex];
-				array[currentIndex] = array[randomIndex];
-				array[randomIndex] = temporaryValue;
-			}
-			return array;
-		}
-	})
+	computed: {
+		...mapState({
+			cards: state => state.cards,
+			value: state => state.value,
+			type: state => state.type,
+			visible: state => state.visible
+		}),
+		...mapGetters([
+			'shuffleCards',
+			'uniqueCardsList'
+		])
+	}
 }
 </script>
