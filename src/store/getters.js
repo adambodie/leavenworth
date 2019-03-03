@@ -1,4 +1,4 @@
-export const getters = {
+const getters = {
 	shuffleCards: state => {
 		const array = state.cards;
 		let currentIndex = array.length, temporaryValue, randomIndex;
@@ -21,3 +21,5 @@ export const getters = {
 			return types;
 		}
 }
+
+export default getters;

@@ -1,4 +1,4 @@
-export const actions = {
+const actions = {
 	filterListByType: ({ commit }) => {
 		commit('setValue', ''),
 		commit('setType', event.target.value)
@@ -14,3 +14,5 @@ export const actions = {
 			});
 	}
 };
+
+export default actions;

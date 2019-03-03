@@ -1,4 +1,4 @@
-export const state = {
+const state = {
 		cards: [
 			{english: 'Beer', german: 'Bier', type: 'Cuisine', visible: true, id: 1},
 			{english: 'Mountain', german: 'Berg', type: 'Geography', visible: true, id: 2},
@@ -45,3 +45,5 @@ export const state = {
 		type: '',
 		visible: true
 };
+
+export default state;
